@@ -261,9 +261,9 @@ if (themeSwitch) {
 
   function updateModel() {
     if (document.body.classList.contains("light-mode")) {
-      viewer.setAttribute("src", "assets/models/computer-optimized.glb");
+      viewer.setAttribute("src", "./assets/models/computer-optimized.glb");
     } else {
-      viewer.setAttribute("src", "assets/models/gaming_setup.glb");
+      viewer.setAttribute("src", "./assets/models/gaming_setup.glb");
     }
   }
 
