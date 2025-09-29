@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leandro Nieto - Software Engineer & 3D Developer Portfolio</title>
+  <meta name="description" content="Portfolio and CV of Leandro Nieto, Software Engineer and Full Stack Developer with expertise in 3D experiences, web development, and innovative digital solutions.">
+  <meta name="keywords" content="Leandro Nieto, Software Engineer, Full Stack Developer, 3D, Portfolio, Resume, CV, Web Developer">
+  <meta name="theme-color" content="#111111">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Fonts (optimized preload + swap) -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@400;700&family=Nunito:wght@400;700&display=swap"
+    as="style">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@400;700&family=Nunito:wght@400;700&display=swap"
+    rel="stylesheet" media="all">
+    
+  <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <!-- Header -->
+  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="#hero" class="active"><i class="bi bi-house navicon" style="margin-right: 6px;"></i><span data-i18n="menu.home">Home</span></a></li>
+    <li><a href="#about"><i class="bi bi-person-workspace" style="margin-right: 6px;"></i><span data-i18n="menu.about">About me</span></a></li>
+    <li><a href="#resume"><i class="bi bi-file-earmark-text navicon" style="margin-right: 6px;"></i><span data-i18n="hero-experience">Resume</span></a></li>
+    <li><a href="#skills"><i class="bi bi-images navicon" style="margin-right: 6px;"></i><span data-i18n="menu.portfolio">Skills</span></a></li>
+    <li><a href="#portfolio"><i class="bi bi-badge-3d" style="margin-right: 6px;"></i><span data-i18n="hero-contact">Inmersion 3D</span></a></li>
+    <li><a href="#contact"><i class="bi bi-envelope navicon" style="margin-right: 6px;"></i><span data-i18n="menu.contact">Contact</span></a></li>
+  </ul>
+</nav>
+
+      <div class="social-links text-center">
+        <a href="#" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <!-- Language & Theme Switch -->
+      <div class="d-flex justify-content-center mt-3 gap-2">
+        <button id="language-toggle" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 40px; height: 40px; overflow: hidden;">
+          <span id="lang-flag" style="display:block;width:100%;height:100%;background-size:cover;background-position:center;border-radius:50%;"></span>
+        </button>
+        <button id="theme-switch" class="btn btn-sm btn-outline-secondary rounded-circle p-0" style="width: 40px; height: 40px;">
+          <i class="bi bi-moon-fill" style="font-size: 1.2rem;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <!-- <div class="background-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+      </div> -->
+
+      <div class="hero-content">
+        <div class="container">
+          <div class="row align-items-center">
+
+            <!-- Text -->
+            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+              <div class="hero-text">
+                <img src="assets/img/logo-invertido.png" alt="Commstore Logo Dark" class="hero-logo logo-dark" loading="lazy">
+                <img src="assets/img/logo.png" alt="Commstore Logo Light" class="hero-logo logo-light" loading="lazy">
+
+                <p class="lead mt-4">
+                  <span id="typed-role" data-i18n-typed="hero.roles"></span>
+                  <span class="typed-cursor" aria-hidden="true"></span>
+                </p>
+
+                <p class="description" id="hero-description" data-i18n="hero-description">
+                  Creamos experiencias digitales diferentes, con diseño innovador y desarrollo funcional. Hacemos realidad tu visión.
+                </p>
+
+                <div class="hero-actions">
+                  <a href="#resume" class="btn btn-primary" data-i18n="hero-experience"></a>
+                  <a href="#portfolio" class="btn btn-primary outline" data-i18n="hero-contact"></a>
+                </div>
+
+                <div class="social-links">
+                  <a href="#" id=""><i class="bi bi-dribbble"></i></a>
+                  <a href="#"><i class="bi bi-behance"></i></a>
+                  <a href="#"><i class="bi bi-github"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+          
+
+
+            <!-- 3D Animation -->
+            <div class="col-lg-8 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-delay="200">
+              <div class="sketchfab-circle-wrapper"
+                style="width:100%;height:100vh;max-height:1200px;aspect-ratio:1/1;border-radius:50%;overflow:hidden;display:flex;justify-content:center;align-items:center;">
+                  <model-viewer 
+                    id="viewer3d"
+                    src="assets/models/gaming_setup.glb"
+                    alt="Gaming Setup"
+                    auto-rotate
+                    camera-controls
+                    style="width:100%; height:100%; background: transparent;">
+                  </model-viewer>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2 data-i18n="hero-contact">Inmersiones 3D</h2>
+        </div><!-- End Section Title -->
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="row">
+            <div class="col-lg-3 filter-sidebar">
+              <div class="filters-wrapper aos-init aos-animate" data-aos="fade-right" data-aos-delay="150">
+                <ul class="portfolio-filters isotope-filters">
+                  <li data-filter="*" class="filter-active">All Projects</li>
+                  <li data-filter=".filter-photography">3D</li>
+                  <li data-filter=".filter-design">Realidad Aumentada</li>
+                  <li data-filter=".filter-automotive">Automotive</li>
+                  <li data-filter=".filter-nature">Nature</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="row gy-4 portfolio-container isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1122px;">
+              
+              <!-- Tarjeta 1 -->
+              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-wrap" data-background="url('assets/img/sky-sunset.jpg')">
+                  <model-viewer src="assets/models/dead_orbit_drone_tm_1.glb"
+                                alt="Dead Orbit Drone"
+                                auto-rotate
+                                camera-controls
+                                style="width:100%; height:100%; background: transparent;">
+                  </model-viewer>
+                  <div class="portfolio-info">
+                    <div class="content">
+                      <span class="category">Drone Flight</span>
+                      <div class="portfolio-links">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modelViewerModal"
+                          data-model="assets/models/dead_orbit_drone_tm_1.glb"
+                          data-background="url('assets/img/sky-sunset.jpg')">
+                          <i class="bi bi-plus-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 2 -->
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design" style="position: absolute; left: 360px; top: 0px;">
+                  <div class="portfolio-wrap" data-background="url('assets/img/inspiring.jpg')">
+                    <div class="sketchfab-embed-wrapper" style="width:100%; height:100%;">
+                      <iframe 
+                        title="Room aquarium (Now Animated)" 
+                        frameborder="0" 
+                        allowfullscreen ="true" 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/3d2177c3e90a4379b3484d811c013284/embed??autostart=1&ui_theme=dark&ui_infos=0&ui_controls=0&ui_stop=0"
+                        style="width:100%; height:100%;">
+                      </iframe>
+                    </div>
+
+                    <div class="portfolio-info">
+                      <div class="content">
+                        
+                        <div class="portfolio-links">
+                          <!-- <a href="#" data-bs-toggle="modal" data-bs-target="#modelViewerModal"
+                            data-model="assets/models/hroom.glb"
+                            data-background="url('assets/img/inspiring.jpg')">
+                            <i class="bi bi-plus-lg"></i>
+                          </a> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive" style="position: absolute; left: 0px; top: 374px;">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Automotive</span>
+                        <h4>Classic Beauty</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" title="Classic Beauty"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature" style="position: absolute; left: 360px; top: 374px;">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Nature</span>
+                        <h4>Natural Growth</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" title="Natural Growth"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <!-- Tarjeta 2 -->
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 360px; top: 0px;">
+                  <div class="portfolio-wrap" data-background="url('assets/img/inspiring.jpg')">
+                    <model-viewer 
+                                  id="butterflyModel"
+                                  src="assets/models/helicopter.glb"
+                                  alt="Garden Robot"
+                                  auto-rotate
+                                  camera-controls
+                                  style="width:100%; height:100%; background: transparent;">
+                    </model-viewer>
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">In combat</span>
+                        <div class="portfolio-links">
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#modelViewerModal"
+                            data-model="assets/models/helicopter.glb"
+                            data-background="url('assets/img/inspiring.jpg')">
+                            <i class="bi bi-plus-lg"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design" style="position: absolute; left: 360px; top: 748px;">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Web Design</span>
+                        <h4>Digital Experience</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
+                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+              </div><!-- End Portfolio Container -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+   
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="profile-image">
+                  <img src="assets/img/person/photProfile.jpeg" alt="Profile Image of Leandro Nieto" class="img-fluid" loading="lazy">
+                </div>
+                <div class="profile-badge">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+              </div>
+              <div class="profile-content">
+                <h3>Leandro Nieto</h3>
+                <p class="profession" data-i18n="data-profession"></p>
+                <div class="contact-links">
+                  <a href="mailto:planificarmedios@gmail.com" class="contact-item"><i class="bi bi-envelope"></i> planificarmedios@gmail.com</a>
+                  <a href="tel:+542236065018" class="contact-item"><i class="bi bi-telephone"></i> +54 (2236) 065-018</a>
+                  <a href="#" class="contact-item"><i class="bi bi-geo-alt"></i> Mar del Plata, Buenos Aires, Argentina</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right column -->
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <div class="section-header">
+                <h2 data-i18n="about-title"></h2>
+              </div>
+              <div class="description">
+                <p data-i18n="about-description1"></p>
+                <p data-i18n="about-description2"></p>
+              </div>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number"data-target="5">0</div>
+                  <div class="stat-label" data-i18n="about-upper-degrees">Degrees</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-target="20+">0+</div>
+                  <div class="stat-label" data-i18n="about-years-experience">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-target="100%">0%</div>
+                  <div class="stat-label" data-i18n="about-client-satisfaction">Client Satisfaction</div>
+                </div>
+              </div>
+              <div class="details-grid">
+                <div class="detail-row">
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="about-upper-degrees"></span>
+                    <span class="detail-value" data-i18n="about-degrees"></span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label" data-i18n="languages-label"></span>
+                    <span class="detail-value" data-i18n="languages-value"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div>
+
+      <section id="techstack" class="techstack section">
+      <div id="techstack" class="">
+    
+        <div id="tech-grid" class="tech-grid"></div>
+      </div>
+    </section>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Row 1: Frontend / Backend -->
+        <div class="row">
+          <!-- Frontend -->
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+              <h3>Front-end Development</h3>
+              <div class="skills-animation">
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>HTML / CSS / Sass / Bootstrap, TailwindCSS, shadcn/ui</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">HTML5 semántico, CSS3, responsive design, UI Frameworks</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>JavaScript / TypeScript / jQuery / React / Next.js / Vite</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">ES6+, DOM, jQuery, programación tipada, arquitectura de componentes</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>WordPress / Elementor</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Diseño de sitios y personalización con WordPress y constructores visuales</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+              <h3>Back-end Development</h3>
+              <div class="skills-animation">
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>PHP / Laravel / Composer</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Desarrollo de aplicaciones con Laravel y Composer</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Node.js</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">APIs REST, Express y arquitectura de microservicios</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Python</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Automatización, análisis de datos y frameworks web</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Databases / DevOps -->
+        <div class="row mt-4">
+          <!-- Databases -->
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+              <h3>Databases</h3>
+              <div class="skills-animation">
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>SQL (MySQL / PostgreSQL)</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Diseño de bases de datos relacionales y consultas optimizadas</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>NoSQL (MongoDB / Firebase)</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Modelado de datos y escalabilidad en entornos NoSQL</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+              <h3>DevOps & Infra</h3>
+              <div class="skills-animation">
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Docker</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Contenerización y despliegues portables</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>SSH / SFTP / Filezilla</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Administración remota y transferencias seguras de archivos</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Data & AI / Tools -->
+        <div class="row mt-4">
+          <!-- Data & AI -->
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+              <h3>Data & AI</h3>
+              <div class="skills-animation">
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>TensorFlow / Teachable Machine</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Modelado y entrenamiento de IA</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Tableau / Google Colab</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Visualización y análisis de datos</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+              <h3>Tools & Version Control</h3>
+              <div class="skills-animation">
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Git / GitHub</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Flujos de trabajo con Git, control de versiones y colaboración</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>CLI (CMD / PowerShell)</h4>
+                    <span class="skill-percentage">100%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-progress="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Automatización de tareas y administración del sistema</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get in touch to collaborate on innovative projects and digital experiences.</p>
+      </div>
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box">
+              <h3>Contact Info</h3>
+              <div class="info-item">
+                <i class="bi bi-geo-alt"></i> Mar del Plata, Buenos Aires, Argentina
+              </div>
+              <div class="info-item">
+                <i class="bi bi-envelope"></i> planificarmedios@gmail.com
+              </div>
+              <div class="info-item">
+                <i class="bi bi-telephone"></i> +54 (2236) 065-018
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="row gy-4">
+                <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>
+                <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Your Email" required></div>
+                <div class="col-12"><input type="text" class="form-control" name="subject" placeholder="Subject" required></div>
+                <div class="col-12"><textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea></div>
+                <div class="col-12 text-center"><button type="submit" class="btn">Send Message</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative">
+    <div class="container text-center">
+      <p>© <span>Copyright</span> <strong class="px-1">Leandro Nieto</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/542236065018" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/techstack.js"></script> 
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("tech-grid");
+
+    techStackIcons.forEach((icon) => {
+      const card = document.createElement("div");
+      card.className = "tech-card";
+
+      card.innerHTML = `
+        <div class="tech-card-content">
+          <div class="tech-icon-wrapper">
+            <model-viewer src="${icon.modelPath}" 
+              auto-rotate
+              camera-controls
+              style="width:80px;height:100px;"
+            </model-viewer>
+          </div>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  });
+</script>
+
+<!-- Script para animar barras -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const skillSection = document.querySelector("#skills");
+    const progressBars = skillSection.querySelectorAll(".progress-bar");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          progressBars.forEach(bar => {
+            const target = bar.getAttribute("data-progress");
+            bar.style.width = target + "%";
+          });
+        } else {
+          progressBars.forEach(bar => {
+            bar.style.width = "0%";
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(skillSection);
+  });
+</script>
+
+<div id="modelViewerModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content" style="position: relative; overflow: hidden; height: 80vh;">
+      <div id="modal-background" style="position:absolute; inset:0; background-size:cover; background-position:center; z-index:0;"></div>
+      <model-viewer id="modalModelViewer"
+                    style="width:100%; height:100%; background: transparent; z-index:1;"
+                    auto-rotate
+                    camera-controls>
+      </model-viewer>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="assets/js/animation.js"></script>
+</body>
+</html>

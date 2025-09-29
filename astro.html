@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronaut Hero</title>
+
+  <style>
+    /* HERO 2 container */
+    #hero-2 {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Parallax layers */
+    #hero-2 .parallax-layer {
+      position: absolute;
+      inset: 0;
+      background-position: bottom;
+      background-size: cover;
+      will-change: transform;
+    }
+
+    /* Backgrounds */
+    #hero-2 .sky {
+      background-image: url("assets/img/sky.jpg");
+      z-index: -50;
+    }
+
+    #hero-2 .mountain-3 {
+      background-image: url("assets/img/mountain-3.png");
+      z-index: -40;
+    }
+
+    #hero-2 .planets {
+      background-image: url("assets/img/planets.png");
+      z-index: -30;
+    }
+
+    #hero-2 .mountain-2 {
+      background-image: url("assets/img/mountain-2.png");
+      z-index: -20;
+    }
+
+    #hero-2 .mountain-1 {
+      background-image: url("assets/img/mountain-1.png");
+      z-index: -10;
+    }
+
+    /* Astronaut wrapper */
+    #hero-2 .astronaut-wrapper {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #hero-2 canvas {
+      width: 400px !important;
+      height: 400px !important;
+    }
+  </style>
+</head>
+<body>
+  <section id="hero-2">
+    <div class="parallax-layer sky"></div>
+    <div class="parallax-layer mountain-3"></div>
+    <div class="parallax-layer planets"></div>
+    <div class="parallax-layer mountain-2"></div>
+    <div class="parallax-layer mountain-1"></div>
+
+    <div class="astronaut-wrapper" id="astronaut-container"></div>
+  </section>
+
+  <!-- Bundle generado por Vite (ya incluye Three.js, GSAP y tu Hero) -->
+  <script type="module" src="assets/bundle.js"></script>
+</body>
+</html>
