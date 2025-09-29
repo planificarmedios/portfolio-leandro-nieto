@@ -3025,5 +3025,44 @@ model-viewer {
   height: 100%;
 }
 
+/* Card Sketchfab */
+#sketchfab-embed {
+  position: relative; /* necesario para los pseudo-elementos */
+  overflow: hidden;
+}
+
+/* Difuminado superior */
+#sketchfab-embed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%; /* más ancho para cubrir créditos */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0));
+  pointer-events: none; /* no bloquea interacción */
+  z-index: 10;
+}
+
+/* Difuminado inferior */
+#sketchfab-embed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55%; /* más ancho para cubrir créditos */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.97), rgba(0,0,0,0));
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* iframe del modelo */
+#sketchfab-embed iframe {
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* debajo de los pseudo-elementos */
+  position: relative;
+}
 
 
