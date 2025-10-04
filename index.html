@@ -733,26 +733,32 @@
   </div>
 </div>
 
+
 <script type="module">
   import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const canvases = document.querySelectorAll(".lottie-canvas");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const canvas = entry.target;
+        const path = canvas.getAttribute("data-lottie");
 
-    canvases.forEach(canvas => {
-      const animationPath = canvas.getAttribute("data-lottie");
+        const player = new DotLottie({
+          autoplay: true,
+          loop: true,
+          canvas,
+          src: path
+        });
 
-      const player = new DotLottie({
-        autoplay: true,
-        loop: true,
-        canvas: canvas,
-        src: animationPath
-      });
-
-      player.load();
+        player.load();
+        observer.unobserve(canvas); // evitar recargas
+      }
     });
   });
+
+  document.querySelectorAll(".lottie-canvas").forEach(c => observer.observe(c));
 </script>
+
 
 
 
