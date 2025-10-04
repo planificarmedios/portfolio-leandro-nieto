@@ -2698,10 +2698,6 @@ body.light-mode .hero .hero-actions .btn.btn-primary:hover {
   box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
-body.light-mode .hero .hero-actions .btn.btn-outline {
-  color: rgb(251, 247, 247) 10%;
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
-}
 
 body.light-mode .hero .background-elements .bg-circle {
   background: linear-gradient(
@@ -3360,6 +3356,17 @@ body.light-theme .sketchfab-iframe.light-version {
 .gbtn.gprev,
 .gbtn.gnext {
   display: none !important;
+}
+
+body.light-theme .hero .hero-actions .btn.btn-outline {
+   background-color: transparent !important; /* fondo transparente */
+  color: #fffdfd !important;               /* texto negro */
+  border-color: #111111 !important;        /* borde negro */
+}
+
+body.light-theme .hero .hero-actions .btn.btn-outline:hover {
+  background-color: #111111 !important;  /* fondo negro al hover */
+  color: #ffffff !important;             /* texto blanco al hover */
 }
 
 

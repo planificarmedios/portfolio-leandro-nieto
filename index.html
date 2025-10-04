@@ -47,7 +47,7 @@
       <nav id="navmenu" class="navmenu">
   <ul>
     <li><a href="#hero" class="active"><i class="bi bi-house navicon" style="margin-right: 6px;"></i><span data-i18n="menu.home">Home</span></a></li>
-    <li><a href="#about"><i class="bi bi-person-workspace" style="margin-right: 6px;"></i><span data-i18n="menu.about">About me</span></a></li>
+    <li><a href="#about"><i class="bi bi-person-workspace" style="margin-right: 6px;"></i><span data-i18n="menu.about"></span></a></li>
     <li><a href="#resume"><i class="bi bi-file-earmark-text navicon" style="margin-right: 6px;"></i><span data-i18n="hero-experience">Resume</span></a></li>
     <li><a href="#skills"><i class="bi bi-images navicon" style="margin-right: 6px;"></i><span data-i18n="menu.portfolio">Skills</span></a></li>
     <li><a href="#portfolio"><i class="bi bi-badge-3d" style="margin-right: 6px;"></i><span data-i18n="hero-contact">Integration  </span></a></li>
@@ -92,7 +92,7 @@
                  <img src="./assets/img/portfolio/logo.webp" alt="Commstore Logo Invertido" class="hero-logo logo-light">
                 
                 <!--  <h2 style="color: #c1bebd">Leandro <span class="accent-text" style="color: #c1bebd">Nieto</span></h2> -->
-                <h2 style="color: #c1bebd">Alianzas estratégicas</h2>
+                <h2 style="color: #c1bebd" data-i18n="hero.title">Alianzas estratégicas</h2>
 
                 <p class="lead mt-4">
                   <span id="typed-role" data-i18n-typed="hero.roles"></span>
@@ -101,15 +101,14 @@
                 <p class="description" id="hero-description" data-i18n="hero-description"></p>
 
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                  <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                  <a href="#portfolio" class="btn btn-primary" data-i18n="hero.cta1"></a>
+                  <a href="#skills" class="btn btn-primary" data-i18n="hero.cta2"></a>
                 </div>
 
                 <div class="social-links">
-                  <a href="#"><i class="bi bi-dribbble"></i></a>
-                  <a href="#"><i class="bi bi-behance"></i></a>
-                  <a href="#"><i class="bi bi-github"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:planificarmedios@gmail.com"><i class="bi bi-envelope"></i></a>
+                  <a href="https://wa.me/542236065018"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/in/leandronieto/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -168,9 +167,8 @@
 
       <!-- Section Title -->
       <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2>Integraciones</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
+        <h2 data-i18n="hero-contact">Integraciones</h2>
+      </div>
 
       <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
 
@@ -316,7 +314,7 @@
     <!-- About Section -->
     <section id="about" class="about section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Sobre Commstore</h2>
+        <h2 data-i18n="menu.about"></h2>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
@@ -390,12 +388,12 @@
         <h2>Skills</h2>
       </div>
 
-      <section id="techstack" class="techstack section">
+    <!--   <section id="techstack" class="techstack section">
       <div id="techstack" class="">
     
         <div id="tech-grid" class="tech-grid"></div>
       </div>
-    </section>
+    </section> -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <!-- Row 1: Frontend / Backend -->
