@@ -929,7 +929,8 @@ section,
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem 1rem;
-  background-color: color-mix(in srgb, var(--surface-color), var(--background-color) 50%);
+  /* background-color: color-mix(in srgb, var(--surface-color), var(--background-color) 50%); */
+  background-color: #232323;
   border-radius: 0.75rem;
   text-decoration: none;
   color: var(--default-color);
@@ -2622,7 +2623,7 @@ body.light-mode .btn-outline:hover {
 
 /* Footer */
 body.light-mode #footer {
-  background: #f9fafb !important;
+  background: white !important;
   color: #374151 !important;
 }
 body.light-mode #footer a {
