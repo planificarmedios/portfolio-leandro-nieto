@@ -79,37 +79,37 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <!-- <div class="background-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-      </div> -->
+      <div class="background-elements">
+              <div class="bg-circle circle-2"></div>
+      </div>
 
       <div class="hero-content">
+
         <div class="container">
           <div class="row align-items-center">
 
-            <!-- Text -->
-            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
               <div class="hero-text">
-                <img src="./assets/img/portfolio/logo-invertido.png" alt="Commstore Logo Dark" class="hero-logo logo-dark" loading="lazy">
-                <img src="./assets/img/portfolio/logo.png" alt="Commstore Logo Light" class="hero-logo logo-light" loading="lazy">
+                <!-- Hero Logo --> 
+                 <img src="assets/img/portfolio/logo-invertido.png" alt="Commstore Logo" class="hero-logo logo-dark"> 
+                 <img src="assets/img/portfolio/logo.png" alt="Commstore Logo Invertido" class="hero-logo logo-light">
+                
+                <!--  <h2 style="color: #c1bebd">Leandro <span class="accent-text" style="color: #c1bebd">Nieto</span></h2> -->
+                <h2 style="color: #c1bebd">Alianzas estratégicas</h2>
 
                 <p class="lead mt-4">
                   <span id="typed-role" data-i18n-typed="hero.roles"></span>
                   <span class="typed-cursor" aria-hidden="true"></span>
                 </p>
-
-                <p class="description" id="hero-description" data-i18n="hero-description">
-                  Creamos experiencias digitales diferentes, con diseño innovador y desarrollo funcional. Hacemos realidad tu visión.
-                </p>
+                <p class="description" id="hero-description" data-i18n="hero-description"></p>
 
                 <div class="hero-actions">
-                  <a href="#resume" class="btn btn-primary" data-i18n="hero-experience"></a>
-                  <a href="#portfolio" class="btn btn-primary outline" data-i18n="hero-contact"></a>
+                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                  <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
 
                 <div class="social-links">
-                  <a href="#" id=""><i class="bi bi-dribbble"></i></a>
+                  <a href="#"><i class="bi bi-dribbble"></i></a>
                   <a href="#"><i class="bi bi-behance"></i></a>
                   <a href="#"><i class="bi bi-github"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -117,85 +117,12 @@
               </div>
             </div>
 
-          
-
-
-            <!-- 3D Animation -->
-            <div class="col-lg-8 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-delay="200">
-              <div class="sketchfab-circle-wrapper"
-                style="width:100%;height:100vh;max-height:1200px;aspect-ratio:1/1;border-radius:50%;overflow:hidden;display:flex;justify-content:center;align-items:center;">
-                  <model-viewer 
-                    id="viewer3d"
-                    src="https://github.com/planificarmedios/portfolio-leandro-nieto/releases/download/v1.0/gaming_setup.glb"
-                    alt="Gaming Setupp"
-                    auto-rotate
-                    camera-controls
-                    style="width:100%; height:100%; background: transparent">
-                  </model-viewer>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2 data-i18n="hero-contact">Inmersiones 3D</h2>
-        </div><!-- End Section Title -->
-
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row">
-            <div class="col-lg-3 filter-sidebar">
-              <div class="filters-wrapper aos-init aos-animate" data-aos="fade-right" data-aos-delay="150">
-                <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-photography">Architecture 3D models</li>
-                  <li data-filter=".filter-design">Realidad Aumentada</li>
-                  <li data-filter=".filter-automotive">Automotive</li>
-                  <li data-filter=".filter-nature">Nature</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-9">
-              <div class="row gy-4 portfolio-container isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1122px;">
-              
-              <!-- Tarjeta 1 -->
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 0px;">
-                <div class="portfolio-wrap" data-background="url('./assets/img/sky-sunset.jpg')">
-                  <model-viewer src="https://github.com/planificarmedios/portfolio-leandro-nieto/releases/download/v1.0/dead_orbit_drone_tm_1.glb"
-                                alt="Dead Orbit Drone"
-                                auto-rotate
-                                camera-controls
-                                style="width:100%; height:100%; background: transparent;">
-                  </model-viewer>
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Drone Flight</span>
-                      <div class="portfolio-links">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modelViewerModal"
-                          data-model="./assets/models/dead_orbit_drone_tm_1.glb"
-                          data-background="url('./assets/img/sky-sunset.jpg')">
-                          <i class="bi bi-plus-lg"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Tarjeta 2 -->
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design" style="position: absolute; left: 360px; top: 0px;">
-                  <div class="portfolio-wrap" data-background="">
-                    <div class="sketchfab-embed-wrapper" id="sketchfab-embed" style="width:100%; height:100%;">
+            <div class="col-lg-6 aos-init aos-animate hero-profile-col" 
+                data-aos="fade-left" data-aos-delay="200">
+              <div class="portfolio-wrap" data-background="url('./assets/img/sky-sunset.jpg')">
+                
                       <iframe 
+                        id ="viewer3d"
                         title="Room aquarium (Now Animated)" 
                         frameborder="0" 
                         allowfullscreen ="true" 
@@ -209,30 +136,93 @@
                         src="https://sketchfab.com/models/a60be41028b049b6a488f5c6effcb6f8/embed?autostart=1&transparent=1&ui_hint=0&ui_theme=dark&dnt=1"
                         style="width:100%; height:100%;">
                       </iframe>
-                    </div>
 
+                      <div class="sketchfab-overlay mb-4" id="sketchfab-overlay">
+                        <div class="drag-icon">
+                          <!-- Flecha izquierda -->
+                          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+
+                          
+                          <!-- Flecha derecha -->
+                          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                 
+                  <div class="portfolio-info">
+                    <div class="content">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+   
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="row">
+            <div class="col-lg-3 filter-sidebar">
+              <div class="filters-wrapper aos-init aos-animate" data-aos="fade-right" data-aos-delay="150">
+                <ul class="portfolio-filters isotope-filters">
+                  <li data-filter="*" class="filter-active">All Projects</li>
+                  <li data-filter=".filter-photography">Animations 3D</li>
+                  <li data-filter=".filter-design">Responsive Design</li>
+                  <li data-filter=".filter-automotive">IA Integrations</li>
+                  <li data-filter=".filter-nature">Recognition</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="row gy-4 portfolio-container isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1122px;">
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 0px;">
+                  <div class="portfolio-wrap">
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/animation-lottie.json"></canvas>
                     <div class="portfolio-info">
                       <div class="content">
-                        
-                        <div class="portfolio-links">
-
-                        </div>
+                        <span class="category">Animations</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive" style="position: absolute; left: 0px; top: 374px;">
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design" style="position: absolute; left: 360px; top: 0px;">
                   <div class="portfolio-wrap">
-                    <img src="./assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/responsive-1.json"></canvas>
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Automotive</span>
-                        <h4>Classic Beauty</h4>
-                        <div class="portfolio-links">
-                          <a href="./assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" title="Classic Beauty"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
+                        <span class="category">Web Design</span>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive" style="position: absolute; left: 0px; top: 374px;">
+                  <div class="portfolio-wrap">
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/MachineLearning.json"></canvas>
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">IA Integrations</span>
                       </div>
                     </div>
                   </div>
@@ -240,59 +230,54 @@
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature" style="position: absolute; left: 360px; top: 374px;">
                   <div class="portfolio-wrap">
-                    <img src="./assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                     <canvas class="lottie-canvas" data-lottie="./assets/lottie/VoiceUI.json"></canvas>
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Nature</span>
-                        <h4>Natural Growth</h4>
-                        <div class="portfolio-links">
-                          <a href="./assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" title="Natural Growth"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
+                        <span class="category">Recognition</span>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
-                <!-- Tarjeta 2 -->
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 360px; top: 0px;">
-                  <div class="portfolio-wrap" data-background="url('./assets/img/inspiring.jpg')">
-                    <model-viewer 
-                                  id="butterflyModel"
-                                  src="https://github.com/planificarmedios/portfolio-leandro-nieto/releases/download/v1.0/helicopter.glb"
-                                  alt="Garden Robott"
-                                  auto-rotate
-                                  camera-controls
-                                  style="width:100%; height:100%; background: transparent;">
-                    </model-viewer>
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 748px;">
+                  <div class="portfolio-wrap">
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/3DRoom.json" ></canvas>
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">In combat</span>
-                        <div class="portfolio-links">
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#modelViewerModal"
-                            data-model="./assets/models/helicopter.glb"
-                            data-background="url('./assets/img/inspiring.jpg')">
-                            <i class="bi bi-plus-lg"></i>
-                          </a>
-                        </div>
+                        <span class="category">Animations</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                
-                <!-- End Portfolio Item -->
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design" style="position: absolute; left: 360px; top: 748px;">
                   <div class="portfolio-wrap">
-                    <img src="./assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/responsive-2.json"></canvas>
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Web Design</span>
-                        <h4>Digital Experience</h4>
-                        <div class="portfolio-links">
-                          <a href="./assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive" style="position: absolute; left: 0px; top: 374px;">
+                  <div class="portfolio-wrap">
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/TensorFlow.json"></canvas>
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">IA Integrations</span>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature" style="position: absolute; left: 360px; top: 374px;">
+                  <div class="portfolio-wrap">
+                     <canvas class="lottie-canvas" data-lottie="./assets/lottie/FaceScanning.json"></canvas>
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Recognition</span>
                       </div>
                     </div>
                   </div>
@@ -307,7 +292,6 @@
       </div>
 
     </section>
-
    
     <!-- About Section -->
     <section id="about" class="about section">
@@ -749,8 +733,28 @@
   </div>
 </div>
 
+<script type="module">
+  import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const canvases = document.querySelectorAll(".lottie-canvas");
+
+    canvases.forEach(canvas => {
+      const animationPath = canvas.getAttribute("data-lottie");
+
+      const player = new DotLottie({
+        autoplay: true,
+        loop: true,
+        canvas: canvas,
+        src: animationPath
+      });
+
+      player.load();
+    });
+  });
+</script>
 
 
-<script src="assets/js/animation.js"></script>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 const translations = {
   en: {
     "menu.home": "Home",
-    "menu.about": "About me",
+    "menu.about": "About we",
     "menu.resume": "Resume",
     "menu.services": "Services",
     "menu.contact": "Contact",
@@ -16,14 +16,14 @@ const translations = {
     "contact.title": "Contact",
     "sidebar-design": "Rooms",
     "sidebar-animes": "Anime",
-    "hero.roles": ["UI/UX Designer", "Software Engineer", "Web Developer", "3D Experience"],
+    "hero.roles": ["UI/UX Design", "Software Engineering", "Web Development", "3D Experience"],
     "hero.prefix": "",
     "hero": {"viewWork": "View My Work" },
-    "hero-contact": "3D Models - Immersion",
+    "hero-contact": "3D Models",
     "hero-experience": "Experience",
     "sidebar-universe": "Universe",
     "data-profession": "Software Engineer, Developer, UI/UX Designer",
-    "hero-description": "We create exceptional digital experiences, blending innovative design with functional development. Let's bring your vision to life.",
+    "hero-description": "We develop innovative digital experiences. We create your ideas with a difference..",
     "about-title": "We create exceptional digital experiences",
     "about-upper-degrees": "Upper-level degrees",
     "about-years-experience": "Years Experience",
@@ -47,7 +47,7 @@ const translations = {
     "about-client-satisfaction": "Clientes satisfechos",
     "about-title": "Creamos experiencias digitales diferentes",
     "menu.home": "Inicio",
-    "menu.about": "Sobre mí",
+    "menu.about": "Sobre nosotros",
     "menu.resume": "Currículum",
     "menu.services": "Servicios",
     "menu.contact": "Contacto",
@@ -63,13 +63,13 @@ const translations = {
     "portfolio.title": "Portafolio",
     "services.title": "Servicios",
     "contact.title": "Contacto",
-    "hero.roles": ["Diseñador UI/UX", "Ingeniero en Sistemas", "Desarrollador Web", "Experiencias 3D"],
+    "hero.roles": ["Diseños UI/UX", "Ingeniería en Sistemas", "Desarrollos Web", "Experiencias 3D"],
     "hero.prefix": "",
-    "hero-contact": "3D - Realidad inmersiva",
+    "hero-contact": "Modelos 3D",
     "hero-experience": "Trayectoria",
     "data-profession": "Ingeniero en Sistemas, Desarrollador, Diseñador UI/UX",
     "hero": {"viewWork": "Ver mi trabajo"},
-    "hero-description": "Creamos experiencias digitales diferentes, con diseño innovador y desarrollo funcional. Hacemos realidad tu visión."
+    "hero-description": "Desarrollamos experiencias digitales con innovación. Creamos tus ideas con diferencia."
   }
 };
 

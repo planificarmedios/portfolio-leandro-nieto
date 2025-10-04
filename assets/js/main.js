@@ -260,10 +260,11 @@ if (themeSwitch) {
   const viewer = document.getElementById("viewer3d");
 
   function updateModel() {
+    console.log ("Updating model...");
     if (document.body.classList.contains("light-mode")) {
-      viewer.setAttribute("src", "./assets/models/computer-optimized.glb");
+      viewer.setAttribute("src", "https://sketchfab.com/models/82ae6c35eec446b49100da2039f3af57/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
     } else {
-      viewer.setAttribute("src", "./assets/models/gaming_setup.glb");
+      viewer.setAttribute("src", "https://sketchfab.com/models/a60be41028b049b6a488f5c6effcb6f8/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
     }
   }
 
