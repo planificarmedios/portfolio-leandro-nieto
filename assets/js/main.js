@@ -262,9 +262,9 @@ if (themeSwitch) {
   function updateModel() {
     console.log ("Updating model...");
     if (document.body.classList.contains("light-mode")) {
-      viewer.setAttribute("src", "https://sketchfab.com/models/82ae6c35eec446b49100da2039f3af57/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
+      viewer.setAttribute("src", "https://sketchfab.com/models/fa026f8edf824b1c8c9b890259a2c314/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
     } else {
-      viewer.setAttribute("src", "https://sketchfab.com/models/a60be41028b049b6a488f5c6effcb6f8/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
+      viewer.setAttribute("src", "https://sketchfab.com/models/e885c0ffdcf94d0097a24fb1b91a038f/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
     }
   }
 
@@ -336,3 +336,55 @@ if (themeSwitch) {
   }, { threshold: 0.3 });
 
   observer.observe(document.getElementById("about"));
+
+  function abrirVentanaGestion() {
+  // Leer el tema actual del localStorage
+  const currentTheme = localStorage.getItem('theme');
+  const isLightMode = currentTheme === 'light';
+
+  // Seleccionar la URL según el tema
+  const url = isLightMode
+    ? 'http://localhost:5001/admin-io/themes/v3/index-2.html' // versión clara
+    : 'http://localhost:5001/admin-io/themes/v3/index2.html'; // versión oscura
+
+  // Opciones del popup
+  const opciones =
+    'width=1200,height=800,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no';
+
+  // Abrir ventana
+  const nuevaVentana = window.open(url, 'SistemasGestion', opciones);
+
+  // Dar foco si se abrió correctamente
+  if (nuevaVentana) nuevaVentana.focus();
+}
+
+
+function supportsWebGL() {
+      try {
+        const canvas = document.createElement('canvas');
+        return !!window.WebGLRenderingContext &&
+              (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
+      } catch (e) {
+        return false;
+      }
+    }
+
+    const lottieContainer = document.getElementById('lottie-loader');
+    const animation = lottie.loadAnimation({
+      container: lottieContainer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: './assets/lottie/cube.json'
+    });
+
+
+document.querySelectorAll('.accordion .card-header').forEach(header => {
+  console.log ('hhhh')
+  const icon = header.querySelector('i.bi');
+  header.addEventListener('click', () => {
+    icon.classList.toggle('bi-chevron-down');
+    icon.classList.toggle('bi-chevron-up');
+  });
+});
+

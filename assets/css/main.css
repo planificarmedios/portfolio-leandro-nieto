@@ -61,11 +61,6 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
 
 a {
   color: var(--accent-color);
@@ -537,14 +532,6 @@ section,
   margin-bottom: 0;
 }
 
-
-.hero {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
 
 .hero .background-elements {
   position: absolute;
@@ -3158,13 +3145,6 @@ body.light-theme .sketchfab-iframe.light-version {
   to   { transform: scale(1.2); opacity: 1; }
 }
 
-/* Solo afecta al bloque del hero */
-.hero-profile-col .profile-container {
-  width: 120%;      /* más ancho que el contenedor normal */
-  max-width: 600px; /* opcional, para que no explote */
-  margin: 0 auto;   /* lo centra */
-}
-
 .hero-profile-col .profile-image {
   width: 100%;       /* ocupa todo el ancho del container */
   height: auto;      /* mantiene proporción */
@@ -3239,24 +3219,6 @@ body.light-theme .sketchfab-iframe.light-version {
   }
 }
 
-/* Solo la card del Hero */
-.hero-profile-col .portfolio-wrap {
-  position: relative;   /* necesario para los zócalos */
-  overflow: hidden;     /* que nada sobresalga */
-  width: 100%;
-  aspect-ratio: 16 / 9; /* 👈 mantiene proporción fija tipo video */
-  min-height: 750px;      /* 👈 fuerza altura mínima */
-  border-radius: 12px;
-}
-
-/* iframe adaptado */
-.hero-profile-col iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 12px;  /* mismo radio que la card */
-  display: block;
-}
 
 /* Zócalos con degradado translucido del color root */
 .hero-profile-col .portfolio-wrap::before,
@@ -3369,4 +3331,145 @@ body.light-theme .hero .hero-actions .btn.btn-outline:hover {
   color: #ffffff !important;             /* texto blanco al hover */
 }
 
+.stats-grid.mt-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* espacio entre los ítems */
+  text-align: center;
+}
 
+.stats-grid.mt-3 .stat-item {
+  position: relative;
+  padding: 0 1rem;
+}
+
+/* 🔹 Línea divisoria */
+.stats-grid.mt-3 .stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Responsivo: en pantallas pequeñas se apilan y la línea se oculta */
+@media (max-width: 576px) {
+  .stats-grid.mt-3 {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .stats-grid.mt-3 .stat-item::after {
+    display: none;
+  }
+}
+
+/* Mantienes tu estilo base */
+    body {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      font-family: var(--default-font);
+      margin: 0;
+      overflow-x: hidden; /* sólo bloquea scroll horizontal, no el vertical */
+      overflow-y: auto;   /* permite hacer scroll vertical normalmente */
+      min-height: 100%;
+    }
+
+    .hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lottie canvas centrado */
+#lottie-canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+/* Contenedor del modelo */
+#viewer-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#viewer-container.visible {
+  opacity: 1;
+}
+
+.hero-profile-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+
+.hero-profile-col .portfolio-wrap {
+  position: relative;
+  width: 120%;           /* se mantiene más ancho hacia la izquierda */
+  max-width: none;
+  margin-left: -10%;     /* se extiende hacia la izquierda */
+  height: 100vh;         /* ahora ocupa todo el alto disponible */
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste visual del iframe */
+.hero-profile-col iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Hover suave */
+.hero-profile-col .portfolio-wrap:hover {
+  transform: scale(1.02);
+}
+
+/* Responsividad: en pantallas pequeñas vuelve a ocupar el 100% */
+@media (max-width: 992px) {
+  .hero-profile-col .portfolio-wrap {
+    width: 100%;
+    margin-left: 0;
+    height: 60vh;
+  }
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: #fff;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.accordion {
+  border: 1px solid #060606; /* 1px de ancho, tipo solid, color gris claro */
+  border-radius: 0.5rem;   /* opcional: bordes redondeados */
+  overflow: hidden;        /* evita que el contenido sobresalga */
+}
+
+.accordion-item {
+  border: none; /* quita bordes internos */
+}

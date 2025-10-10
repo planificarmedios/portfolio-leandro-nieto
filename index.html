@@ -51,7 +51,14 @@
     <li><a href="#resume"><i class="bi bi-file-earmark-text navicon" style="margin-right: 6px;"></i><span data-i18n="hero-experience">Resume</span></a></li>
     <li><a href="#skills"><i class="bi bi-images navicon" style="margin-right: 6px;"></i><span data-i18n="menu.portfolio">Skills</span></a></li>
     <li><a href="#portfolio"><i class="bi bi-badge-3d" style="margin-right: 6px;"></i><span data-i18n="hero-contact">Integration  </span></a></li>
-<!--     <li><a href="#contact"><i class="bi bi-envelope navicon" style="margin-right: 6px;"></i><span data-i18n="menu.contact">Contact</span></a></li> -->
+    <li>
+      <a href="#"
+        onclick="abrirVentanaGestion(); return false;">
+        <i class="bi bi-speedometer2" style="margin-right: 6px;"></i>
+        <span data-i18n="hero-gestion">Sistemas de gestión</span>
+      </a>
+    </li>
+
   </ul>
 </nav>
 
@@ -115,8 +122,9 @@
 
             <div class="col-lg-6 aos-init aos-animate hero-profile-col" 
                 data-aos="fade-left" data-aos-delay="200">
-              <div class="portfolio-wrap" data-background="url('./assets/img/sky-sunset.jpg')">
-                
+              <div class="portfolio-wrap" data-background="">
+
+                              
                       <iframe 
                         id ="viewer3d"
                         title="Room aquarium (Now Animated)" 
@@ -178,17 +186,18 @@
             <div class="col-lg-3 filter-sidebar">
               <div class="filters-wrapper aos-init aos-animate" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-photography">Animations 3D</li>
-                  <li data-filter=".filter-design">Responsive Design</li>
-                  <li data-filter=".filter-automotive">IA Integrations</li> 
-                  <li data-filter=".filter-nature">Recognition</li>
-                  <li data-filter=".filter-realtime">Realtime Face Tracking</li>
+                  <li data-filter="*" class="filter-active" data-i18n="portfolio.filter.all">All Projects</li>
+                  <li data-filter=".filter-photography" data-i18n="portfolio.filter.photography">Animations 3D</li>
+                  <li data-filter=".filter-design" data-i18n="portfolio.filter.design">Responsive Design</li>
+                  <li data-filter=".filter-automotive" data-i18n="portfolio.filter.automotive">IA Integrations</li>
+                  <li data-filter=".filter-nature" data-i18n="portfolio.filter.nature">Recognition</li>
+                  <li data-filter=".filter-realtime" data-i18n="portfolio.filter.realtime">Realtime Face Tracking</li>
                 </ul>
               </div>
             </div>
 
             <div class="col-lg-9">
+
               <div class="row gy-4 portfolio-container isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1122px;">
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 0px;">
@@ -246,9 +255,9 @@
                   </div>
                 </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 748px;">
+                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography" style="position: absolute; left: 0px; top: 0px;">
                   <div class="portfolio-wrap">
-                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/3DInteractiveCar.json" ></canvas>
+                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/3DInteractiveCar.json"></canvas>
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Animations</span>
@@ -319,62 +328,193 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+
             <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-image">
-                  <img src="./assets/img/person/photProfile.jpeg" alt="Profile Image of Leandro Nieto" class="img-fluid" loading="lazy">
-                </div>
-                <div class="profile-badge">
-                  <i class="bi bi-check-circle-fill"></i>
-                </div>
-              </div>
-              <div class="profile-content">
-                <h3>Leandro Nieto</h3>
-                <p class="profession" data-i18n="data-profession"></p>
-                <div class="contact-links">
-                  <a href="mailto:planificarmedios@gmail.com" class="contact-item"><i class="bi bi-envelope"></i> planificarmedios@gmail.com</a>
-                  <a href="tel:+542236065018" class="contact-item"><i class="bi bi-telephone"></i> +54 (2236) 065-018</a>
-                  <a href="#" class="contact-item"><i class="bi bi-geo-alt"></i> Mar del Plata, Buenos Aires, Argentina</a>
-                </div>
-              </div>
-            </div>
+  <div class="profile-header">
+    <div class="profile-image">
+      <img src="./assets/img/person/photProfile.jpeg" alt="Profile Image of Leandro Nieto" class="img-fluid" loading="lazy">
+    </div>
+    <div class="profile-badge">
+      <i class="bi bi-check-circle-fill"></i>
+    </div>
+  </div>
+
+  <div class="profile-content">
+    <h3>Leandro Nieto</h3>
+    <p class="profession" data-i18n="data-profession">
+      Ingeniero en Sistemas, Desarrollador, Diseñador UI/UX
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:planificarmedios@gmail.com" class="contact-item">
+        <i class="bi bi-envelope"></i> planificarmedios@gmail.com
+      </a>
+      <a href="tel:+542236065018" class="contact-item">
+        <i class="bi bi-telephone"></i> +54 (2236) 065-018
+      </a>
+      <a href="#" class="contact-item">
+        <i class="bi bi-geo-alt"></i> Mar del Plata, Buenos Aires, Argentina
+      </a>
+    </div>
+
+    <!-- 🔽 Sección de estadísticas agregada aquí -->
+    <div class="stats-grid mt-3">
+      <div class="stat-item">
+        <div class="stat-number" data-target="5" data-suffix="">5</div>
+        <div class="stat-label" data-i18n="about-upper-degrees">Títulos superiores</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="20+" data-suffix="+">20+</div>
+        <div class="stat-label" data-i18n="about-years-experience">Años de experiencia</div>
+      </div>
+    </div>
+    <!-- 🔼 Fin de la sección agregada -->
+  </div>
+</div>
+
+
           </div>
           <!-- Right column -->
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
-              <div class="section-header">
-                <h2 data-i18n="about-title"></h2>
-              </div>
+             
               <div class="description">
                 <p data-i18n="about-description1"></p>
                 <p data-i18n="about-description2"></p>
               </div>
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number"data-target="5">0</div>
-                  <div class="stat-label" data-i18n="about-upper-degrees">Degrees</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number" data-target="20+">0+</div>
-                  <div class="stat-label" data-i18n="about-years-experience">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number" data-target="100%">0%</div>
-                  <div class="stat-label" data-i18n="about-client-satisfaction">Client Satisfaction</div>
-                </div>
+
+              <!-- 555 -->
+
+              <div class="resume-section aos-init aos-animate" data-aos="fade-up">
+              
+              <div class="section-header">
+                <h2 data-i18n="resume.professionalExperience">Professional Experience</h2>
               </div>
-              <div class="details-grid">
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label" data-i18n="about-upper-degrees"></span>
-                    <span class="detail-value" data-i18n="about-degrees"></span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label" data-i18n="languages-label"></span>
-                    <span class="detail-value" data-i18n="languages-value"></span>
-                  </div>
-                </div>
-              </div>
+
+  <div class="accordion" id="experienceAccordion">
+     
+    <!-- COMMSTORE -->
+    <div class="accordion-item mb-3">
+      <h2 class="accordion-header" id="headingCommstore">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCommstore" aria-expanded="false" aria-controls="collapseCommstore">
+          <span data-i18n="resume.commstore.company">
+            COMMSTORE - <strong>Freelance IT & Web Solutions Specialist</strong>
+          </span>
+        </button>
+      </h2>
+      <div id="collapseCommstore" class="accordion-collapse collapse" aria-labelledby="headingCommstore" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li data-i18n="resume.commstore.taskb">Januay 2025 to present.</li>
+            <li data-i18n="resume.commstore.task1">Provided remote and on-site technical support and issue resolution.</li>
+            <li data-i18n="resume.commstore.task2">Analyzed incidents and developed IT solutions aligned with client requirements.</li>
+            <li data-i18n="resume.commstore.task3">Created and maintained responsive websites and digital interfaces.</li>
+            <li data-i18n="resume.commstore.task4">Implemented ticket management and problem-tracking systems.</li>
+            <li data-i18n="resume.commstore.task5">Maintained long-term relationships with clients through efficient service delivery.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- JPHLIONS -->
+    <div class="accordion-item mb-3">
+      <h2 class="accordion-header" id="headingJPHLIONS">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJPHLIONS" aria-expanded="false" aria-controls="collapseJPHLIONS">
+          <span data-i18n="resume.jphlions.company">
+            www.jphlions.com - <strong>Front and backend Software Engineer</strong>
+          </span>
+        </button>
+      </h2>
+      <div id="collapseJPHLIONS" class="accordion-collapse collapse" aria-labelledby="headingJPHLIONS" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li data-i18n="resume.jphlions.taskb">From August 2022 to March 2025.</li>
+            <li data-i18n="resume.jphlions.task1">Development and maintenance  web applications with, Js, node.js, and sql.</li>
+            <li data-i18n="resume.jphlions.task2">Integration of REST APIs and database optimization for large-scale data handling.</li>
+            <li data-i18n="resume.jphlions.task3">Implementation of responsive interfaces.</li>
+            <li data-i18n="resume.jphlions.task4">Continuous collaboration with remote teams.</li>
+            <li data-i18n="resume.jphlions.task5">Ensured application scalability, maintainability, and performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORTRESS ARGENTINA -->
+    <div class="accordion-item mb-3">
+      <h2 class="accordion-header" id="headingFortress">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFortress" aria-expanded="false" aria-controls="collapseFortress">
+          <span data-i18n="resume.fortress.position">www.fortressargentina.com - <strong>Customer Service & Admin Manager</strong></span>
+        </button>
+      </h2>
+      <div id="collapseFortress" class="accordion-collapse collapse" aria-labelledby="headingFortress" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li data-i18n="resume.fortress.taskb">From January 2018 to July 2022.</li>
+            <li data-i18n="resume.fortress.task1">Experienced professional with a strong background in system development and operational optimization.</li>
+            <li data-i18n="resume.fortress.task2">Incident resolution and delivering personalized customer service..</li>
+            <li data-i18n="resume.fortress.task3">Enhancing brand loyalty and managing personnel effectively.</li>
+            <li data-i18n="resume.fortress.task4">Operational processes improvement and workflow optimization.</li>
+            <li data-i18n="resume.fortress.task5">Financial management, including purchase management, supplier payments, check issuance, billing, bank reconciliation, collections, and cash flow monitoring.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDINILLA -->
+    <div class="accordion-item mb-3">
+      <h2 class="accordion-header" id="headingMedinilla">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedinilla" aria-expanded="false" aria-controls="collapseMedinilla">
+          <span data-i18n="resume.medinilla.company">www.medinillaseguridad.com.ar - <strong>Software Engineer.</strong></span> 
+        </button>
+      </h2>
+      <div id="collapseMedinilla" class="accordion-collapse collapse" aria-labelledby="headingMedinilla" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li data-i18n="resume.medinilla.taskb">From March 2010 to January 2018.</li>
+            <li data-i18n="resume.medinilla.task1">Development of customized systems for electronic security management and monitoring.</li>
+            <li data-i18n="resume.medinilla.task2">Integration of client tracking, incident management, and monitoring tools.</li>
+            <li data-i18n="resume.medinilla.task3">Design and optimization of internal applications for administrative and operational efficiency.</li>
+            <li data-i18n="resume.medinilla.task4">Collaboration in the deployment of private safety deposit systems with Fortress Argentina SA.</li>
+            <li data-i18n="resume.medinilla.task5">Maintenance of databases and technical documentation to support operations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- POSNET / FISERV -->
+    <div class="accordion-item mb-3">
+      <h2 class="accordion-header" id="headingPosnet">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePosnet" aria-expanded="false" aria-controls="collapsePosnet">
+          <span data-i18n="resume.posnet.company">www.fiserv.com.ar - <strong>IT Support Technician</strong></span>
+        </button>
+      </h2>
+      <div id="collapsePosnet" class="accordion-collapse collapse" aria-labelledby="headingPosnet" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li data-i18n="resume.posnet.taskb">From January 2007 to November 2009.</li>
+            <li data-i18n="resume.posnet.task0">Led the Atlantic Zone operations, combining managerial, administrative, and technical responsibilities.</li>
+            <li data-i18n="resume.posnet.task1">Installed, configured, and updated electronic payment terminals.</li>
+            <li data-i18n="resume.posnet.task2">Trained clients on device use, maintenance, and troubleshooting.</li>
+            <li data-i18n="resume.posnet.task3">Maintained detailed control of equipment stock, replacements, and updates.</li>
+            <li data-i18n="resume.posnet.task4">Coordinated with suppliers and logistics teams for equipment dispatch and repair.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  
+
+  </div>
+</div>
+
+
+              
+
+
+              <!-- 555 -->
+             
+              
             </div>
           </div>
         </div>
@@ -621,152 +761,7 @@
       </div>
     </section>
 
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2>Resume</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <!-- Left column with summary and contact -->
-          <div class="col-lg-4">
-            <div class="resume-side aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
-              <div class="profile-img mb-4">
-                <img src="assets/img/profile/profile-square-2.webp" alt="Profile" class="img-fluid rounded">
-              </div>
-
-              <h3>Professional Summary</h3>
-              <p>Driven software architect with expertise in developing scalable, high-performance enterprise solutions. Passionate about leveraging cutting-edge technologies to solve complex business challenges.</p>
-
-              <h3 class="mt-4">Contact Information</h3>
-              <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> 742 Evergreen Terrace, Springfield, MA 02101</li>
-                <li><i class="bi bi-envelope"></i> contact@example.com</li>
-                <li><i class="bi bi-phone"></i> +1 (555) 123-4567</li>
-                <li><i class="bi bi-linkedin"></i> linkedin.com/in/example</li>
-              </ul>
-
-              <div class="skills-animation mt-4">
-                <h3>Technical Skills</h3>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Web Development</span>
-                    <span>95%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>UI/UX Design</span>
-                    <span>85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Cloud Architecture</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Project Management</span>
-                    <span>80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right column with experience and education -->
-          <div class="col-lg-8 ps-4 ps-lg-5">
-            <!-- Experience Section -->
-            <div class="resume-section aos-init aos-animate" data-aos="fade-up">
-              <h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
-
-              <div class="resume-item">
-                <h4>Senior Software Architect</h4>
-                <h5>2022 - Present</h5>
-                <p class="company"><i class="bi bi-building"></i> Tech Innovations Inc.</p>
-                <ul>
-                  <li>Lead the architectural design and implementation of enterprise-scale applications</li>
-                  <li>Mentor team of 12 developers and establish technical best practices</li>
-                  <li>Drive adoption of microservices architecture and cloud-native solutions</li>
-                  <li>Reduce system downtime by 75% through improved architecture and monitoring</li>
-                </ul>
-              </div>
-
-              <div class="resume-item">
-                <h4>Lead Developer</h4>
-                <h5>2019 - 2022</h5>
-                <p class="company"><i class="bi bi-building"></i> Digital Solutions Corp.</p>
-                <ul>
-                  <li>Spearheaded development of company's flagship product reaching 1M+ users</li>
-                  <li>Implemented CI/CD pipeline reducing deployment time by 60%</li>
-                  <li>Managed team of 8 developers across multiple projects</li>
-                  <li>Increased code test coverage from 45% to 90%</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Education Section -->
-            <div class="resume-section aos-init" data-aos="fade-up" data-aos-delay="100">
-              <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
-
-              <div class="resume-item">
-                <h4>Master of Science in Computer Science</h4>
-                <h5>2017 - 2019</h5>
-                <p class="company"><i class="bi bi-building"></i> Stanford University</p>
-                <p>Specialized in Artificial Intelligence and Machine Learning. Graduated with honors.</p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Bachelor of Science in Software Engineering</h4>
-                <h5>2013 - 2017</h5>
-                <p class="company"><i class="bi bi-building"></i> MIT</p>
-                <p>Dean's List all semesters. Led university's coding club.</p>
-              </div>
-            </div>
-
-            <!-- Certifications Section -->
-            <div class="resume-section aos-init" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-award me-2"></i>Certifications</h3>
-
-              <div class="resume-item">
-                <h4>AWS Certified Solutions Architect - Professional</h4>
-                <h5>2023</h5>
-              </div>
-
-              <div class="resume-item">
-                <h4>Google Cloud Professional Architect</h4>
-                <h5>2022</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
+ 
   <!-- Footer -->
   <footer id="footer" class="footer position-relative">
     <div class="container text-center">
@@ -794,6 +789,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
 <script src="assets/js/main.js"></script>
 <script src="assets/js/lang.js"></script>
 <!-- <script src="assets/js/techstack.js"></script>  -->

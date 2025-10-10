@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from adminlte.io/docs/3.1//components/plugins.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 11:53:01 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Plugins | AdminLTE v3 Documentation</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Plugins" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AdminLTE v3.1 Documentation" />
+<meta property="og:description" content="AdminLTE v3.1 Documentation" />
+<link rel="canonical" href="plugins.html" />
+<meta property="og:url" content="plugins.html" />
+<meta property="og:site_name" content="AdminLTE v3 Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Plugins" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"https://adminlte.io/docs/3.1/components/plugins.html","headline":"Plugins","description":"AdminLTE v3.1 Documentation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+  <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../assets/css/docs.css">
+  <link rel="stylesheet" href="../assets/css/highlighter.css">
+  <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+<script data-cfasync="false" nonce="d28dfc53-e407-4a0e-a190-695403dc4748">try{(function(w,d){!function(j,k,l,m){if(j.zaraz)console.error("zaraz is loaded twice");else{j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz._v="5870";j.zaraz._n="d28dfc53-e407-4a0e-a190-695403dc4748";j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const t of Object.entries(Object.entries(dataLayer).reduce((u,v)=>({...u[1],...v[1]}),{})))zaraz.set(t[0],t[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const w=j.zaraz.q.shift();j[l].q.push(w)}r.defer=!0;for(const x of[localStorage,sessionStorage])Object.keys(x||{}).filter(z=>z.startsWith("_zaraz_")).forEach(y=>{try{j[l]["z_"+y.slice(7)]=JSON.parse(x.getItem(y))}catch{j[l]["z_"+y.slice(7)]=x.getItem(y)}});r.referrerPolicy="origin";r.src="../../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bs=>new Promise(bt=>{if(bs){bs.e&&bs.e.forEach(bu=>{try{const bv=d.querySelector("script[nonce]"),bw=bv?.nonce||bv?.getAttribute("nonce"),bx=d.createElement("script");bw&&(bx.nonce=bw);bx.innerHTML=bu;bx.onload=()=>{d.head.removeChild(bx)};d.head.appendChild(bx)}catch(by){console.error(`Error executing script: ${bu}\n`,by)}});Promise.allSettled((bs.f||[]).map(bz=>fetch(bz[0],bz[1])))}bt()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper"><div class="preloader flex-column justify-content-center align-items-center">
+  <img class="animation__shake" src="../assets/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+</div>
+<nav class="main-header navbar navbar-expand navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link bg-info rounded dropdown-toggle" href="#" id="navbarVersionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        v3.1.0
+      </a>
+      <div class="dropdown-menu py-0" aria-labelledby="navbarVersionDropdown">
+        <a class="dropdown-item bg-info disabled" href="#">v3.1</a>
+        <a class="dropdown-item" href="../../3.0/index.html">v3.0</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="../../2.4/installation.html">v2.4</a>
+        <a class="dropdown-item" href="../../../themes/AdminLTE/documentation/index.html">&lt;= v2.3</a>
+      </div>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav ml-auto">
+    <!-- <li class="nav-item d-none d-sm-inline-block">
+      <a href="index3.html" class="nav-link">Home</a>
+    </li> -->
+    <li class="nav-item">
+      <div class="theme-switch-wrapper nav-link">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </li>
+    <!-- <li class="nav-item">
+      <em class="nav-link">Enable Dark Mode!</em>
+    </li> -->
+  </ul>
+
+  <!-- SEARCH FORM -->
+  <!-- <form class="form-check-inline ml-3">
+    <div class="input-group input-group-sm">
+      <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+      <div class="input-group-append">
+        <button class="btn btn-navbar" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </form> -->
+</nav>
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <a href="../index-2.html" class="brand-link logo-switch">
+    <img src="../assets/img/logo-xs.png" alt="AdminLTE Docs Logo Small" class="brand-image-xl logo-xs">
+    <img src="../assets/img/logo-xl.png" alt="AdminLTE Docs Logo Large" class="brand-image-xs logo-xl" style="left: 12px">
+  </a>
+  <div class="sidebar">
+    <div class="form-inline mt-2">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../index-2.html" class="nav-link">
+              <i class="nav-icon fas fa-microchip"></i>
+              <p>
+                Installation
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../dependencies.html" class="nav-link">
+              <i class="nav-icon fas fa-handshake"></i>
+              <p>
+                Dependencies & Plugins
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../layout.html" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Layout
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item menu-open">
+            
+
+            <a href="index.html" class="nav-link active">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Components
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                  <a href="main-header.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Main Header</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="main-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Main Sidebar</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="control-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Control Sidebar</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="cards.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Card</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="boxes.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Small-/ Info-Box</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="direct-chat.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Direct Chat</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="timeline.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Timeline</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="ribbons.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Ribbons</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="miscellaneous.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Miscellaneous</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="plugins.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Plugins</p>
+                  </a>
+                </li>
+              </ul>
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../javascript/index.html" class="nav-link">
+              <i class="nav-icon fas fa-code"></i>
+              <p>
+                JavaScript
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                  <a href="../javascript/layout.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Layout</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/push-menu.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Push Menu</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/treeview.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Treeview</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/card-widget.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Card Widget</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/card-refresh.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>CardRefresh</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/control-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Control Sidebar</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/direct-chat.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Direct Chat</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/todo-list.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Todo List</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/toasts.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Toasts</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/sidebar-search.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Sidebar Search</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/expandable-tables.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Expandable Tables</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/iframe.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>IFrame</p>
+                  </a>
+                </li><li class="nav-item">
+                  <a href="../javascript/navbar-search.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Navbar Search</p>
+                  </a>
+                </li>
+              </ul>
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../browser-support.html" class="nav-link">
+              <i class="nav-icon fab fa-chrome"></i>
+              <p>
+                Browser Support
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../implementations.html" class="nav-link">
+              <i class="nav-icon fas fa-bookmark"></i>
+              <p>
+                Implementations
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../additional-styles.html" class="nav-link">
+              <i class="nav-icon fas fa-mortar-pestle"></i>
+              <p>
+                Additional Styles
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../upgrade-guide.html" class="nav-link">
+              <i class="nav-icon fas fa-hand-point-up"></i>
+              <p>
+                Upgrade Guide
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../how-to-contribute.html" class="nav-link">
+              <i class="nav-icon fas fa-hands-helping"></i>
+              <p>
+                Contributing Guide
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../faq.html" class="nav-link">
+              <i class="nav-icon fas fa-question-circle"></i>
+              <p>
+                FAQ
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+
+          <li class="nav-item">
+            
+
+            <a href="../license.html" class="nav-link">
+              <i class="nav-icon fas fa-file-contract"></i>
+              <p>
+                License
+                
+              </p>
+            </a>
+
+            
+          </li>
+       
+      </ul>
+    </nav>
+  </div>
+</aside>
+<div class="content-wrapper px-4 py-2">
+  
+  <div class="content-header">
+    <h1>Plugins</h1>
+  </div>
+  
+  <div class="content px-2">
+    <p>AdminLTE comes with color overrides &amp; extras for the following plugins.</p>
+
+<h3 id="bootstrap-slider">Bootstrap Slider</h3>
+
+<p>You can override the color for bootstrap slider tracks with the following classes:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.slider-*</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider-red"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"slider form-control"</span> <span class="na">data-slider...</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>You can also change the layout of the slider with the following classes:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.slider-vertical</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.slider-horizontal</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider-red"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"slider slider-vertical form-control"</span> <span class="na">data-slider...</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="icheck-bootstrap">iCheck Bootstrap</h3>
+
+<p>You can override the color of a iCheck checkbox/radio input, add the following class:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.icheck-*</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icheck-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>
+    Checkbox Label
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="pace">Pace</h3>
+
+<p>You can override the color for all pace themes, load your desired theme and add one the following classes to <code class="language-plaintext highlighter-rouge">body</code>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.pace-*</code>
+    <ul>
+      <li>barber-shop</li>
+      <li>flat-top</li>
+      <li>minimal</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-big-counter-*</code>
+    <ul>
+      <li>big-counter</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-bounce-*</code>
+    <ul>
+      <li>bounce</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pace-center-atom-*</code>
+    <ul>
+      <li>center-atom</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pace-center-circle-*</code>
+    <ul>
+      <li>center-circle</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pace-center-radar-*</code>
+    <ul>
+      <li>center-radar</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pace-center-simple-*</code>
+    <ul>
+      <li>center-simple</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pace-corner-indicator-*</code>
+    <ul>
+      <li>corner-indicator</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-flash-*</code>
+    <ul>
+      <li>flash</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-fill-left-*</code>
+    <ul>
+      <li>fill-left</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-loading-bar-*</code>
+    <ul>
+      <li>loading-bar</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-material-*</code>
+    <ul>
+      <li>material</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.pace-mac-osx-*</code>
+    <ul>
+      <li>mac-osx</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example: <code class="language-plaintext highlighter-rouge">&lt;body class="pace-success"&gt;</code></p>
+
+<h3 id="sweetalert">SweetAlert</h3>
+
+<p>If you use SweetAlert and load the SweetAlert CSS before AdminLTE’s CSS, then the colors of any icon changes to AdminLTE’s default colors.</p>
+
+<h3 id="toastr">Toastr</h3>
+
+<p>If you use Toastr and load the Toastr CSS before AdminLTE’s CSS, then the background colors changes to AdminLTE’s default colors.</p>
+
+  </div>
+</div>
+<footer class="main-footer">
+  <div class="float-right d-none d-sm-inline">
+    v3.1.0
+  </div>
+  <strong>Copyright &copy; 2014-2021 <a href="../../../index.html">AdminLTE.io</a>.</strong> All rights reserved.
+</footer>
+</div>
+
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="../assets/js/adminlte.min.js"></script>
+<script>
+  var toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  var currentTheme = localStorage.getItem('theme');
+  var mainHeader = document.querySelector('.main-header');
+
+  if (currentTheme) {
+    if (currentTheme === 'dark') {
+      if (!document.body.classList.contains('dark-mode')) {
+        document.body.classList.add("dark-mode");
+      }
+      if (mainHeader.classList.contains('navbar-light')) {
+        mainHeader.classList.add('navbar-dark');
+        mainHeader.classList.remove('navbar-light');
+      }
+      toggleSwitch.checked = true;
+    }
+  }
+
+  function switchTheme(e) {
+    if (e.target.checked) {
+      if (!document.body.classList.contains('dark-mode')) {
+        document.body.classList.add("dark-mode");
+      }
+      if (mainHeader.classList.contains('navbar-light')) {
+        mainHeader.classList.add('navbar-dark');
+        mainHeader.classList.remove('navbar-light');
+      }
+      localStorage.setItem('theme', 'dark');
+    } else {
+      if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove("dark-mode");
+      }
+      if (mainHeader.classList.contains('navbar-dark')) {
+        mainHeader.classList.add('navbar-light');
+        mainHeader.classList.remove('navbar-dark');
+      }
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2437d112162f4ec4b63c3ca0eb38fb20","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from adminlte.io/docs/3.1//components/plugins.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 11:53:01 GMT -->
+</html>

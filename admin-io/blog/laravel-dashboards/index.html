@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en-US">
+
+<!-- Mirrored from adminlte.io/blog/laravel-dashboards/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 11:40:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.4",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(../integrate-adminlte-with-laravel/index.html).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/index.html")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style></style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v26.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>22 Best Laravel Dashboards &amp; Templates 2025 - AdminLTE.IO</title>
+<link crossorigin data-rocket-preconnect href="https://fonts.gstatic.com/" rel="preconnect">
+<link crossorigin data-rocket-preconnect href="https://www.gstatic.com/" rel="preconnect">
+<link crossorigin data-rocket-preload as="font" href="../../wp-content/themes/theme-promo/assets/fonts/themify9f24.woff?-fvbane" rel="preload">
+<link crossorigin data-rocket-preload as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2" rel="preload">
+<link crossorigin data-rocket-preload as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecg.woff2" rel="preload">
+<link crossorigin data-rocket-preload as="font" href="https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" rel="preload">
+<link crossorigin data-rocket-preload as="font" href="https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2" rel="preload">
+<style id="wpr-usedcss">img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:0 0!important;padding:0!important}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}:where(.wp-block-calendar table:not(.has-background) th){background:#ddd}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}:where(.wp-block-post-comments input[type=submit]){border:none}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:root :where(.wp-block-cover h1:not(.has-text-color)),:root :where(.wp-block-cover h2:not(.has-text-color)),:root :where(.wp-block-cover h3:not(.has-text-color)),:root :where(.wp-block-cover h4:not(.has-text-color)),:root :where(.wp-block-cover h5:not(.has-text-color)),:root :where(.wp-block-cover h6:not(.has-text-color)),:root :where(.wp-block-cover p:not(.has-text-color)){color:inherit}:where(.wp-block-file){margin-bottom:1.5em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):is(a):active,:where(.wp-block-file__button):is(a):focus,:where(.wp-block-file__button):is(a):hover,:where(.wp-block-file__button):is(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:.4s show-content-image}}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}:root :where(.wp-block-latest-posts.is-grid){padding:0}:root :where(.wp-block-latest-posts.wp-block-latest-posts__list){padding-left:0}ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}:where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation.has-background .wp-block-navigation-submenu a:not(.wp-element-button)){padding:.5em 1em}:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content){padding:.5em 1em}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}:where(.wp-block-post-comments-form) input:not([type=submit]),:where(.wp-block-post-comments-form) textarea{border:1px solid #949494;font-family:inherit;font-size:1em}:where(.wp-block-post-comments-form) input:where(:not([type=submit]):not([type=checkbox])),:where(.wp-block-post-comments-form) textarea{padding:calc(.667em + 2px)}:where(.wp-block-post-excerpt){box-sizing:border-box;margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}:where(.wp-block-search__input){font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-transform:inherit}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:0}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}:root :where(.wp-block-site-logo.is-style-rounded){border-radius:9999px}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link{background-color:#f0f0f0;color:#444}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-amazon{background-color:#f90;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bandcamp{background-color:#1ea0c3;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-behance{background-color:#0757fe;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bluesky{background-color:#0a7aff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-codepen{background-color:#1e1f26;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-deviantart{background-color:#02e49b;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-discord{background-color:#5865f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dribbble{background-color:#e94c89;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dropbox{background-color:#4280ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-etsy{background-color:#f45800;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-facebook{background-color:#0866ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-fivehundredpx{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-flickr{background-color:#0461dd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-foursquare{background-color:#e65678;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-github{background-color:#24292d;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-goodreads{background-color:#eceadd;color:#382110}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-google{background-color:#ea4434;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-gravatar{background-color:#1d4fc4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-instagram{background-color:#f00075;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-lastfm{background-color:#e21b24;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-linkedin{background-color:#0d66c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-mastodon{background-color:#3288d4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-medium{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-meetup{background-color:#f6405f;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-patreon{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pinterest{background-color:#e60122;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pocket{background-color:#ef4155;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-reddit{background-color:#ff4500;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-skype{background-color:#0478d7;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-snapchat{background-color:#fefc00;color:#fff;stroke:#000}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-soundcloud{background-color:#ff5600;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-spotify{background-color:#1bd760;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-telegram{background-color:#2aabee;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-threads{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tiktok{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tumblr{background-color:#011835;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitch{background-color:#6440a4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vimeo{background-color:#1eb7ea;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vk{background-color:#4680c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-wordpress{background-color:#3499cd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-whatsapp{background-color:#25d366;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-x{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-yelp{background-color:#d32422;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-youtube{background-color:red;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link{background:0 0}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link svg{height:1.25em;width:1.25em}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-amazon{color:#f90}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bandcamp{color:#1ea0c3}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-behance{color:#0757fe}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bluesky{color:#0a7aff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-codepen{color:#1e1f26}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-deviantart{color:#02e49b}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-discord{color:#5865f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dribbble{color:#e94c89}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dropbox{color:#4280ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-etsy{color:#f45800}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-facebook{color:#0866ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-fivehundredpx{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-flickr{color:#0461dd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-foursquare{color:#e65678}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-github{color:#24292d}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-goodreads{color:#382110}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-google{color:#ea4434}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-gravatar{color:#1d4fc4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-instagram{color:#f00075}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-lastfm{color:#e21b24}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-linkedin{color:#0d66c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-mastodon{color:#3288d4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-medium{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-meetup{color:#f6405f}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-patreon{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pinterest{color:#e60122}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pocket{color:#ef4155}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-reddit{color:#ff4500}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-skype{color:#0478d7}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-snapchat{color:#fff;stroke:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-soundcloud{color:#ff5600}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-spotify{color:#1bd760}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-telegram{color:#2aabee}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-threads{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tiktok{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tumblr{color:#011835}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitch{color:#6440a4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vimeo{color:#1eb7ea}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vk{color:#4680c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-whatsapp{color:#25d366}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-wordpress{color:#3499cd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-x{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-yelp{color:#d32422}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-youtube{color:red}:root :where(.wp-block-social-links .wp-social-link a){padding:.25em}:root :where(.wp-block-social-links.is-style-logos-only .wp-social-link a){padding:0}:root :where(.wp-block-social-links.is-style-pill-shape .wp-social-link a){padding-left:.6666666667em;padding-right:.6666666667em}:root :where(.wp-block-tag-cloud.is-style-outline){display:flex;flex-wrap:wrap;gap:1ch}:root :where(.wp-block-tag-cloud.is-style-outline a){border:1px solid;font-size:unset!important;margin-right:0;padding:1ch 2ch;text-decoration:none!important}:root :where(.wp-block-table-of-contents){box-sizing:border-box}:where(.wp-block-term-description){box-sizing:border-box;margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(pre.wp-block-verse){font-family:inherit}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}:root{--wp--preset--aspect-ratio--square:1;--wp--preset--aspect-ratio--4-3:4/3;--wp--preset--aspect-ratio--3-4:3/4;--wp--preset--aspect-ratio--3-2:3/2;--wp--preset--aspect-ratio--2-3:2/3;--wp--preset--aspect-ratio--16-9:16/9;--wp--preset--aspect-ratio--9-16:9/16;--wp--preset--color--black:#000000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#ffffff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6, 147, 227, 1) 0%,rgb(155, 81, 224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,rgb(122, 220, 180) 0%,rgb(0, 208, 130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252, 185, 0, 1) 0%,rgba(255, 105, 0, 1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255, 105, 0, 1) 0%,rgb(207, 46, 46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,rgb(238, 238, 238) 0%,rgb(169, 184, 195) 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,rgb(74, 234, 220) 0%,rgb(151, 120, 209) 20%,rgb(207, 42, 186) 40%,rgb(238, 44, 130) 60%,rgb(251, 105, 98) 80%,rgb(254, 248, 76) 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,rgb(255, 206, 236) 0%,rgb(152, 150, 240) 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,rgb(254, 205, 165) 0%,rgb(254, 45, 45) 50%,rgb(107, 0, 62) 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,rgb(255, 203, 112) 0%,rgb(199, 81, 192) 50%,rgb(65, 88, 208) 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,rgb(255, 245, 203) 0%,rgb(182, 227, 212) 50%,rgb(51, 167, 181) 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,rgb(202, 248, 128) 0%,rgb(113, 206, 126) 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,rgb(2, 3, 129) 0%,rgb(40, 116, 252) 100%);--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;--wp--preset--spacing--20:0.44rem;--wp--preset--spacing--30:0.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0, 0, 0, .2);--wp--preset--shadow--deep:12px 12px 50px rgba(0, 0, 0, .4);--wp--preset--shadow--sharp:6px 6px 0px rgba(0, 0, 0, .2);--wp--preset--shadow--outlined:6px 6px 0px -3px rgba(255, 255, 255, 1),6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp:6px 6px 0px rgba(0, 0, 0, 1)}:where(.is-layout-flex){gap:.5em}:where(.is-layout-grid){gap:.5em}:where(.wp-block-post-template.is-layout-flex){gap:1.25em}:where(.wp-block-post-template.is-layout-grid){gap:1.25em}:where(.wp-block-columns.is-layout-flex){gap:2em}:where(.wp-block-columns.is-layout-grid){gap:2em}:root :where(.wp-block-pullquote){font-size:1.5em;line-height:1.6}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0))}*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-font-sans-serif);font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}h1,h2,h3,h4,h5{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}p{margin-top:0;margin-bottom:1rem}ul{padding-left:2rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}strong{font-weight:bolder}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}tbody,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus{outline:dotted 1px;outline:-webkit-focus-ring-color auto 5px}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}select{word-wrap:normal}[type=button],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}iframe{border:0}progress{vertical-align:baseline}[hidden]{display:none!important}.container{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){legend{font-size:1.5rem}}@media (min-width:1400px){.container{max-width:1320px}}.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-y) * -1);margin-right:calc(var(--bs-gutter-x)/ -2);margin-left:calc(var(--bs-gutter-x)/ -2)}.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)/ 2);padding-left:calc(var(--bs-gutter-x)/ 2);margin-top:var(--bs-gutter-y)}@media (min-width:576px){.col-sm-6{flex:0 0 auto;width:50%}}@media (min-width:768px){.col-md-6{flex:0 0 auto;width:50%}}@media (min-width:992px){.col-lg-3{flex:0 0 auto;width:25%}.col-lg-4{flex:0 0 auto;width:33.3333333333%}.col-lg-6{flex:0 0 auto;width:50%}.col-lg-8{flex:0 0 auto;width:66.6666666667%}.col-lg-9{flex:0 0 auto;width:75%}.col-lg-12{flex:0 0 auto;width:100%}}.table{--bs-table-bg:transparent;--bs-table-striped-color:#212529;--bs-table-striped-bg:rgba(0, 0, 0, .05);--bs-table-active-color:#212529;--bs-table-active-bg:rgba(0, 0, 0, .1);--bs-table-hover-color:#212529;--bs-table-hover-bg:rgba(0, 0, 0, .075);width:100%;margin-bottom:1rem;color:#212529;vertical-align:top;border-color:#dee2e6}.table>:not(caption)>*>*{padding:.5rem;background-color:var(--bs-table-bg);background-image:linear-gradient(var(--bs-table-accent-bg),var(--bs-table-accent-bg));border-bottom-width:1px}.table>tbody{vertical-align:inherit}.table>:not(:last-child)>:last-child>*{border-bottom-color:currentColor}.breadcrumb{display:flex;flex-wrap:wrap;padding:0;margin-bottom:1rem;list-style:none}.progress{display:flex;height:1rem;overflow:hidden;font-size:.75rem;background-color:#e9ecef;border-radius:.25rem}.d-flex{display:flex!important}.border{border:1px solid #dee2e6!important}.justify-content-center{justify-content:center!important}.visible{visibility:visible!important}@font-face{font-display:swap;font-family:themify;src:url('../../wp-content/themes/theme-promo/assets/fonts/themify9f24.eot?-fvbane');src:url('../../wp-content/themes/theme-promo/assets/fonts/themifyd41d.eot?#iefix-fvbane') format('embedded-opentype'),url('../../wp-content/themes/theme-promo/assets/fonts/themify9f24.woff?-fvbane') format('woff'),url('../../wp-content/themes/theme-promo/assets/fonts/themify9f24.ttf?-fvbane') format('truetype'),url('../../wp-content/themes/theme-promo/assets/fonts/themify9f24.svg?-fvbane#themify') format('svg');font-weight:400;font-style:normal}[class*=" ti-"],[class^=ti-]{font-family:themify;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.ti-arrow-right:before{content:"\e628"}body,html{height:100%;font-family:Mulish,sans-serif;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,h5{margin:0;color:#111;font-family:Mulish,sans-serif}h1{font-size:50px}h2{font-size:40px}h3{font-size:30px}h4{font-size:24px}h5{font-size:18px}p{font-size:15px;color:#687083;line-height:1.7;margin-bottom:15px}img{max-width:100%}button:focus,input:focus,select:focus,textarea:focus{outline:0}a:-webkit-any-link,a:focus,a:hover{text-decoration:none;outline:0}ul{padding:0;margin:0}.container{position:relative;z-index:9}@media (min-width:1200px){.container{max-width:1140px}}section{overflow:hidden;position:relative}.set-bg{background-repeat:no-repeat;background-size:cover;background-position:top center}.spad{padding-top:100px;padding-bottom:100px}.header{background:#161d31;padding:20px 0 25px;position:absolute;left:0;top:0;width:100%;z-index:1}.header.header-normal{position:relative}@media only screen and (max-width:61.93em){.header{padding:30px 0}}@media only screen and (min-width:103.125em){.header .container{max-width:1600px}}.header__logo{padding-top:8px}.header__logo a{display:inline-block}.header__nav{text-align:right}.header__nav nav{display:inline-block;margin-right:60px}.header__nav nav ul li{list-style:none;display:inline-block;margin-right:55px}@media only screen and (max-width:75em){.header__nav nav{margin-right:30px}.header__nav nav ul li{margin-right:25px}}.header__nav nav ul li.active a{color:#fff}.header__nav nav ul li:last-child{margin-right:0}.header__nav nav ul li a{display:block;font-size:16px;color:#9a9fad;font-family:Poppins,sans-serif;padding:10px 5px;-webkit-transition:none,.3s;-moz-transition:none,.3s;-ms-transition:none,.3s;-o-transition:none,.3s;transition:all,.3s}.header__nav nav ul li a:hover{color:#fff}.header__nav .header__btn{display:inline-block}.header__nav .header__btn a{display:inline-block;font-size:16px;color:#fff;border:1px solid #fff;padding:10px 32px;border-radius:50px}.offcanvas-menu-wrapper{display:none}.canvas__open{display:none}@media only screen and (max-width:61.93em){.header__logo{padding-top:0}.header__nav{display:none}.canvas__open{display:block;font-size:22px;color:#fff;height:35px;width:35px;line-height:35px;text-align:center;border:1px solid #fff;border-radius:2px;cursor:pointer;position:absolute;right:15px;top:-4px}.offcanvas-menu-overlay{position:fixed;left:0;top:0;height:100%;width:100%;background:rgba(0,0,0,.7);content:"";z-index:98;-webkit-transition:none,.5s;-moz-transition:none,.5s;-ms-transition:none,.5s;-o-transition:none,.5s;transition:all,.5s;visibility:hidden}.offcanvas-menu-overlay.active{visibility:visible}.offcanvas-menu-wrapper{position:fixed;left:-300px;width:300px;height:100%;background:#fff;padding:50px 20px 30px 30px;display:block;z-index:99;overflow-y:auto;-webkit-transition:none,.5s;-moz-transition:none,.5s;-ms-transition:none,.5s;-o-transition:none,.5s;transition:all,.5s;opacity:0}.offcanvas-menu-wrapper.active{opacity:1;left:0}.offcanvas__menu{margin-bottom:25px}.offcanvas__menu ul li{list-style:none}.offcanvas__menu ul li:last-child{margin-right:0}.offcanvas__menu ul li a{display:block;font-size:16px;color:#111;font-family:Poppins,sans-serif;padding:10px 5px}.offcanvas__btn{display:inline-block}.offcanvas__btn a{display:inline-block;font-size:16px;color:#111;border:1px solid #111;padding:10px 32px;border-radius:50px}}.feature{padding-top:170px}.blog-details{padding-top:80px}.blog__details__pic{margin-bottom:44px}.blog__details__pic img{min-width:100%;border-radius:10px}.blog__details__text{margin-bottom:44px}.blog__details__text h1,.blog__details__text h2{color:#102039;font-size:35px;font-weight:500;font-family:Poppins,sans-serif;line-height:1.5;margin-bottom:18px}.blog__details__text p{color:#878c8f;font-size:15px;line-height:2;margin-bottom:10px}.blog__details__text p:last-child{margin-bottom:0}.blog__details__social{text-align:right}.blog__details__social div{margin-right:6px;display:inline-block}.blog__details__social a{font-size:12px;color:#102039;display:inline-block;height:33px;width:33px;border:1px solid #e0e1e1;border-radius:50%;line-height:33px;text-align:center;-webkit-transition:none,.3s;-moz-transition:none,.3s;-ms-transition:none,.3s;-o-transition:none,.3s;transition:all,.3s}.blog__details__social div:last-child{margin-right:0}.blog__details__social a:hover{background:#4a63fe;color:#fff;border-color:#4a63fe}.blog__details__comment{margin-bottom:80px}.blog__details__comment h4{color:#102039;font-size:25px;font-weight:500;font-family:Poppins,sans-serif;margin-bottom:40px}.blog__details__comment h4 span{color:#0d47bd}.blog__details__form h4{color:#102039;font-size:25px;font-weight:500;font-family:Poppins,sans-serif;margin-bottom:40px}.blog__details__form h4 span{color:#0d47bd}.blog__details__form form input{color:#606d78;font-size:15px;width:100%;border:none;font-family:Poppins,sans-serif;height:60px;padding-left:30px;border:1px solid #e1e1e1;border-radius:5px;margin-bottom:30px}.blog__details__form form input::placeholder{color:#606d78;font-size:15px}.blog__details__form form textarea{color:#606d78;font-size:15px;width:100%;border:none;font-family:Poppins,sans-serif;height:198px;padding-left:30px;border:1px solid #e1e1e1;border-radius:5px;resize:none;margin-bottom:24px}.blog__details__form form textarea::placeholder{color:#606d78;font-size:15px}.blog__details__form form button{font-size:17px;color:#fff;background:#26be92;border:none;border-radius:5px;padding:18px 32px 16px}.blog__details__form form button i{font-size:12px;margin-left:12px}.footer{background:#010a1f;padding-top:145px}.footer__content{padding-bottom:115px}.footer__about{margin-bottom:35px}.footer__about .footer__logo{margin-bottom:24px}.footer__about p{color:#707788;font-size:16px;line-height:1.7;margin-bottom:0}.footer__widget{margin-bottom:35px}.footer__widget.footer__links{padding-left:35px}.footer__widget h5{color:#fff;font-weight:600;margin-bottom:22px}.footer__widget ul li{list-style:none;line-height:1.9}.footer__widget ul li a{font-size:16px;color:#707788;-webkit-transition:none,.3s;-moz-transition:none,.3s;-ms-transition:none,.3s;-o-transition:none,.3s;transition:all,.3s}.footer__widget ul li a:hover{color:#fff}.footer__widget p{color:#707788;font-size:16px;margin-bottom:25px}.footer__widget form{position:relative}.footer__widget form input{width:100%;height:40px;background:#fff;border-radius:5px;border:none;padding-left:20px;font-size:13px;color:#d8dadf}.footer__widget form input::placeholder{font-size:13px;color:#d8dadf}.footer__widget form button{font-size:15px;color:#fff;background:#0d3595;position:absolute;right:-1px;top:0;height:100%;border:none;border-top-right-radius:5px;border-bottom-right-radius:5px;padding:0 22px}.footer__copyright{border-top:1px solid rgba(255,255,255,.2);padding:46px 0}.footer__copyright__text p{color:#8a91a2;font-size:16px;font-family:Poppins,sans-serif;font-weight:300;margin-bottom:0}@media only screen and (max-width:61.93em){.blog__details__social{text-align:center}.footer__widget.footer__links{padding-left:0}.footer__copyright__text p{text-align:center;margin-bottom:15px}}.footer__copyright__links{text-align:right}.footer__copyright__links .menu li:last-child{padding-right:0}.footer__copyright__links .menu li{display:initial;padding-right:12px}@media only screen and (max-width:61.93em){.footer__copyright__links{text-align:center}}.footer__copyright__links a{display:inline-block;color:#8a91a2;font-size:16px;font-weight:300;margin-right:34px}.footer__copyright__links a:last-child{margin-right:0}@font-face{font-family:Poppins;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Mulish;font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/mulish/v17/1Ptvg83HX_SGhgqk3wot.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}.blog-btn{display:flex;flex-wrap:wrap;gap:8px}.blog-btn [class$="_btn"]{display:inline-flex;align-items:center;justify-content:center;font-size:14px;padding:10px 16px;border-radius:5px;text-decoration:none;border:1px solid transparent;transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s,transform .2s}.blog-btn .preview_btn{color:#fff;background:#005fd5}.blog-btn .cart_btn{color:#005fd5;background:0 0;border-color:#005fd5;padding:9px 12px}.blog-btn .preview_btn:hover{box-shadow:0 7px 18px rgba(0,96,213,.44)}.blog-btn :is(.preview_btn,.details_btn,.cart_btn):focus-visible{outline:currentColor solid 2px;outline-offset:2px}.blog-btn .preview_btn:hover{transform:translateY(-1px)}img{max-width:100%;height:auto}.blog__details__text h3{margin:50px 0 15px}.blog__details__text h2{margin-top:2rem}.blog__details__text p{color:#474747;font-size:16px}.blog-details ul{margin:20px 0}.blog-details ul li{margin-left:40px;padding:5px}.blog-details h4{margin:30px 0}</style><link rel="preload" data-rocket-preload as="image" imagesrcset="https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg.avif 1200w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-300x243.jpg.avif 300w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-1024x829.jpg.avif 1024w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-768x622.jpg.avif 768w" imagesizes="(max-width: 1200px) 100vw, 1200px" fetchpriority="high">
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="22 Best Laravel Dashboards &amp; Templates 2025 - AdminLTE.IO" />
+	<meta property="og:description" content="Our collection of the best Laravel dashboards offers the most reliable templates for all web applications you work on. After reviewing over fifty possible candidates, we settled on these twenty-two. We based our selection on multiple factors since we deliver the best. These Laravel dashboards offer flexible designs and layouts, great color selection, and heaps [&hellip;]" />
+	<meta property="og:url" content="https://adminlte.io/blog/laravel-dashboards/" />
+	<meta property="og:site_name" content="AdminLTE.IO" />
+	<meta property="article:published_time" content="2025-09-04T10:00:00+00:00" />
+	<meta property="article:modified_time" content="2025-09-05T13:58:00+00:00" />
+	<meta property="og:image" content="https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="972" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Aigars Silkalns" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Aigars Silkalns" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="15 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://adminlte.io/blog/laravel-dashboards/#article","isPartOf":{"@id":"https://adminlte.io/blog/laravel-dashboards/"},"author":{"name":"Aigars Silkalns","@id":"https://adminlte.io/#/schema/person/7f1e110d045bd4b0cd5efbc0fd6e6715"},"headline":"22 Best Laravel Dashboards &#038; Templates 2025","datePublished":"2025-09-04T10:00:00+00:00","dateModified":"2025-09-05T13:58:00+00:00","mainEntityOfPage":{"@id":"https://adminlte.io/blog/laravel-dashboards/"},"wordCount":2085,"commentCount":0,"publisher":{"@id":"https://adminlte.io/#organization"},"image":{"@id":"https://adminlte.io/blog/laravel-dashboards/#primaryimage"},"thumbnailUrl":"https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg","articleSection":["Templates"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://adminlte.io/blog/laravel-dashboards/#respond"]}]},{"@type":"WebPage","@id":"https://adminlte.io/blog/laravel-dashboards/","url":"https://adminlte.io/blog/laravel-dashboards/","name":"22 Best Laravel Dashboards & Templates 2025 - AdminLTE.IO","isPartOf":{"@id":"https://adminlte.io/#website"},"primaryImageOfPage":{"@id":"https://adminlte.io/blog/laravel-dashboards/#primaryimage"},"image":{"@id":"https://adminlte.io/blog/laravel-dashboards/#primaryimage"},"thumbnailUrl":"https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg","datePublished":"2025-09-04T10:00:00+00:00","dateModified":"2025-09-05T13:58:00+00:00","breadcrumb":{"@id":"https://adminlte.io/blog/laravel-dashboards/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://adminlte.io/blog/laravel-dashboards/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://adminlte.io/blog/laravel-dashboards/#primaryimage","url":"https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg","contentUrl":"https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg","width":1200,"height":972,"caption":"laravel dashboards"},{"@type":"BreadcrumbList","@id":"https://adminlte.io/blog/laravel-dashboards/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://adminlte.io/"},{"@type":"ListItem","position":2,"name":"Blogs","item":"https://adminlte.io/blog/"},{"@type":"ListItem","position":3,"name":"22 Best Laravel Dashboards &#038; Templates 2025"}]},{"@type":"WebSite","@id":"https://adminlte.io/#website","url":"https://adminlte.io/","name":"AdminLTE.IO","description":"Most popular Bootstrap admin dashboard template in the world with 5M users. Download it now!","publisher":{"@id":"https://adminlte.io/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://adminlte.io/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://adminlte.io/#organization","name":"AdminLTE.IO","url":"https://adminlte.io/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://adminlte.io/#/schema/logo/image/","url":"https://adminlte.io/wp-content/uploads/2021/03/logo.png","contentUrl":"https://adminlte.io/wp-content/uploads/2021/03/logo.png","width":160,"height":27,"caption":"AdminLTE.IO"},"image":{"@id":"https://adminlte.io/#/schema/logo/image/"}},{"@type":"Person","@id":"https://adminlte.io/#/schema/person/7f1e110d045bd4b0cd5efbc0fd6e6715","name":"Aigars Silkalns","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://adminlte.io/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/ba8ffcefbaaec481373d85072fdfdae628449bf1ebae707ca57aa3b69dbbf350?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/ba8ffcefbaaec481373d85072fdfdae628449bf1ebae707ca57aa3b69dbbf350?s=96&d=mm&r=g","caption":"Aigars Silkalns"},"sameAs":["https://colorlib.com/wp/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="AdminLTE.IO &raquo; 22 Best Laravel Dashboards &#038; Templates 2025 Comments Feed" href="feed/index.html" />
+<style id='wp-emoji-styles-inline-css' type='text/css'></style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'></style>
+<style id='global-styles-inline-css' type='text/css'></style>
+
+
+
+
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="../../wp-content/themes/theme-promo/assets/vendor/jssocials/jssocials.min32d4.js?ver=6.8.3" id="jssocials-js-js" data-rocket-defer defer></script>
+<script data-minify="1" type="text/javascript" src="../../wp-content/cache/min/1/wp-content/themes/theme-promo/assets/js/main8b09.js?ver=1757080579" id="main-js" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="../../wp-json/wp/v2/posts/773.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+
+<link rel='shortlink' href='../../indexb648.html?p=773' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed9c77.json?url=https%3A%2F%2Fadminlte.io%2Fblog%2Flaravel-dashboards%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedcf44?url=https%3A%2F%2Fadminlte.io%2Fblog%2Flaravel-dashboards%2F&amp;format=xml" />
+<meta name="generator" content="speculation-rules 1.6.0">
+<link rel="icon" href="../../wp-content/uploads/2021/03/cropped-logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2021/03/cropped-logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2021/03/cropped-logo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://adminlte.io/wp-content/uploads/2021/03/cropped-logo-270x270.png" />
+		<style type="text/css" id="wp-custom-css"></style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.19.4" data-wpr-features="wpr_remove_unused_css wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_host_fonts_locally wpr_desktop" /><script data-cfasync="false" nonce="51e61222-faf0-4634-a4d1-a10c1960e8d9">try{(function(w,d){!function(j,k,l,m){if(j.zaraz)console.error("zaraz is loaded twice");else{j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz._v="5870";j.zaraz._n="51e61222-faf0-4634-a4d1-a10c1960e8d9";j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const t of Object.entries(Object.entries(dataLayer).reduce((u,v)=>({...u[1],...v[1]}),{})))zaraz.set(t[0],t[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const w=j.zaraz.q.shift();j[l].q.push(w)}r.defer=!0;for(const x of[localStorage,sessionStorage])Object.keys(x||{}).filter(z=>z.startsWith("_zaraz_")).forEach(y=>{try{j[l]["z_"+y.slice(7)]=JSON.parse(x.getItem(y))}catch{j[l]["z_"+y.slice(7)]=x.getItem(y)}});r.referrerPolicy="origin";r.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bs=>new Promise(bt=>{if(bs){bs.e&&bs.e.forEach(bu=>{try{const bv=d.querySelector("script[nonce]"),bw=bv?.nonce||bv?.getAttribute("nonce"),bx=d.createElement("script");bw&&(bx.nonce=bw);bx.innerHTML=bu;bx.onload=()=>{d.head.removeChild(bx)};d.head.appendChild(bx)}catch(by){console.error(`Error executing script: ${bu}\n`,by)}});Promise.allSettled((bs.f||[]).map(bz=>fetch(bz[0],bz[1])))}bt()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+
+<body class="wp-singular post-template-default single single-post postid-773 single-format-standard wp-custom-logo wp-theme-theme-promo">
+<!-- Offcanvas Begin -->
+<div  class="offcanvas-menu-overlay"></div>
+<div  class="offcanvas-menu-wrapper">
+    <nav class="offcanvas__menu">
+        <ul>
+            <li class="active"><a href="../../index.html">Home</a></li>
+            <li><a href="../../docs/index.html">Documents</a></li>
+            <li><a href="../../premium/index.html">Premium Templates</a></li>
+            <li><a href="../index.html">Our Blog</a></li>
+        </ul>
+    </nav>
+    <div  class="offcanvas__btn">
+        <a href="#">Subscribe</a>
+    </div>
+</div>
+<!-- Offcanvas End -->
+
+<!-- Header Section Begin -->
+<header  class="header header-normal">
+    <div  class="container">
+        <div  class="row">
+            <div class="col-lg-3">
+                <div class="header__logo">
+                    <a href="../../index.html">
+                        <img width="160" height="27" src="../../wp-content/uploads/2021/03/logo.png" alt="AdminLTE.IO">                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="header__nav">
+                    <nav>
+                        <div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-203"><a href="../../index.html">Home</a></li>
+<li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208"><a href="../../docs/index.html">Documents</a></li>
+<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="../../premium/index.html">Premium Templates</a></li>
+<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-205"><a href="../index.html">Blog</a></li>
+</ul></div>                    </nav>
+                        <div class="header__btn">
+                        <a href="#footerSection">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="canvas__open"><i class="fa fa-bars"></i></div>
+    </div>
+</header>
+<!-- Header Section End -->
+    <!-- Blog Details Section Begin -->
+    <section  class="blog-details spad">
+        <div  class="container">
+            <div  class="row d-flex justify-content-center">
+                
+<div class="col-lg-8">
+    <div class="blog__details__content">
+        <div class="blog__details__pic">
+            <picture class="attachment-post-thumbnail size-post-thumbnail wp-post-image" decoding="async" fetchpriority="high">
+<source type="image/avif" srcset="https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg.avif 1200w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-300x243.jpg.avif 300w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-1024x829.jpg.avif 1024w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-768x622.jpg.avif 768w" sizes="(max-width: 1200px) 100vw, 1200px"/>
+<img data-no-lazy="" width="1200" height="972" src="../../wp-content/uploads/2021/06/laravel-dashboards.jpg" alt="laravel dashboards" decoding="async" fetchpriority="high" srcset="https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards.jpg 1200w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-300x243.jpg 300w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-1024x829.jpg 1024w, https://adminlte.io/wp-content/uploads/2021/06/laravel-dashboards-768x622.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px"/>
+</picture>
+        </div>
+        <div class="blog__details__text">
+            <span> 4 September, 2025</span>
+            <h1>22 Best Laravel Dashboards &#038; Templates 2025</h1>
+            
+<p><strong>Our collection of the best Laravel dashboards offers the most reliable templates for all web applications you work on.</strong></p>
+
+
+
+<p>After reviewing over fifty possible candidates, we settled on these twenty-two.</p>
+
+
+
+<p>We based our selection on multiple factors since we deliver the best.</p>
+
+
+
+<p>These Laravel dashboards offer flexible designs and layouts, great color selection, and heaps of features.</p>
+
+
+
+<p>Plus!</p>
+
+
+
+<p>Since this collection was requested from users of all skill levels, we also included a few free options.</p>
+
+
+
+<p>You can use these to learn Laravel and building dashboards or for quick prototypes.</p>
+
+
+
+<p>This is it. Developing an admin dashboard has never been that fun!</p>
+
+
+
+<p>Enjoy.</p>
+
+
+
+<h2 class="wp-block-heading">Creative Tim Premium Laravel Templates</h2>
+
+
+
+<h3 class="wp-block-heading">1. Argon</h3>
+
+
+
+<h4 class="wp-block-heading">💎 15,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/argon-laravel-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="argon laravel template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/argon-laravel-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/argon-laravel-template.jpg" alt="argon laravel template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Top-rated Laravel template with 5-star rating, 100+ elements, and comprehensive documentation for all skill levels.</p>
+
+
+
+<p>Argon is at the top of the list for multiple reasons. Not only does it have a 5-star rating, engaging design and 100s of elements, but it also promises a great process of making your project a reality.</p>
+
+
+
+<p>Very user-friendly if you will. In short, both beginners and professionals can profit from Argon tremendously.</p>
+
+
+
+<p>If you ever encounter any inconvenience, you can always contact pro tech support or just flip through the comprehensive documentation.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/argon-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">2. Material</h3>
+
+
+
+<h4 class="wp-block-heading">💎 10,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/material-laravel-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="material laravel template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/material-laravel-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/material-laravel-template.jpg" alt="material laravel template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Adaptable Laravel dashboard with Material Design, ready-made layouts, and perfect component harmony.</p>
+
+
+
+<p>This collection includes a mix of free and premium Laravel dashboards. The Material template also comes in two versions for your convenience.</p>
+
+
+
+<p>You can use Material for as many web apps as you want. It is adaptable enough to fit something niche or something general. You can customize it however you want.</p>
+
+
+
+<p>Thanks to the ready-made layouts and a broad selection of practical elements, material saves you A LOT of time.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/material-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/material-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">3. Black</h3>
+
+
+
+<h4 class="wp-block-heading">💎 8,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/black-laravel-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="black laravel template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/black-laravel-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/black-laravel-template.jpg" alt="black laravel template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Striking dark Laravel dashboard with mobile-ready design and 90+ hours of development time saved.</p>
+
+
+
+<p>Many users have complained about the lack of dark designs. To your luck, here is Black. This striking Laravel dashboard is everything you need to create a mobile-ready admin.</p>
+
+
+
+<p>Creative-Tim spent about ninety hours completing Black with all its perks. Yes, 90 hours, saved!</p>
+
+
+
+<p>Your custom-made application deserves a custom-made admin panel. You will attain a great outcome that will take you little time to complete. Even as a beginner!</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/black-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/black-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">4. Now UI</h3>
+
+
+
+<h4 class="wp-block-heading">💎 7,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/now-ui-laravel-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="now ui laravel template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/now-ui-laravel-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/now-ui-laravel-template.jpg" alt="now ui laravel template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Flexible and extensible Laravel template with beginner-friendly code and professional admin creation.</p>
+
+
+
+<p>Getting projects done will now be much quicker. If you still haven&#8217;t find the right Laravel dashboard, the chances are high that Now UI will do the trick.</p>
+
+
+
+<p>A flexible and extensible template that you can modify however you want. OR. You use it out-of-the-box and save even more time.</p>
+
+
+
+<p>Now UI is here to serve all its users very well. The code is also built with beginners in mind, so no matter how skilled you are, Now UI ensures you the creation of a professional admin.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/now-ui-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/now-ui-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">5. Paper</h3>
+
+
+
+<h4 class="wp-block-heading">💎 6,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/paper-laravel-dashboard-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="paper laravel dashboard template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/paper-laravel-dashboard-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/paper-laravel-dashboard-template.jpg" alt="paper laravel dashboard template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Modern mobile-first design with appealing color choices, 160 elements, and ready-made background options.</p>
+
+
+
+<p>If only I could tell what, but something appeals to me regarding Paper. Secretly, this is my favorite Laravel dashboard.</p>
+
+
+
+<p>It has this nice color choice with a modern, mobile-first design that creates a pleasant atmosphere. Keep in mind, no need to stick with the default configuration.</p>
+
+
+
+<p>While making custom adjustments, you can also pick from ready-made active and sidebar background colors.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/paper-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/paper-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">6. White</h3>
+
+
+
+<h4 class="wp-block-heading">💎 5,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/white-laravel-dashboard.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="white laravel dashboard" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/white-laravel-dashboard.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/white-laravel-dashboard.jpg" alt="white laravel dashboard"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Light mode Laravel template with gradient details, 200 elements, and comprehensive admin features.</p>
+
+
+
+<p>I mentioned White earlier when discussing the Black Laravel template. This is the same dashboard, just in light mode.</p>
+
+
+
+<p>There&#8217;s no need to configure the dark edition if you can just go with this bright version. Note: The gradient detail spices things up, right?</p>
+
+
+
+<p>Along with the great styling options, White also offers an array of elements (200!) that make for one hell of a dashboard.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/white-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/white-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">7. Light</h3>
+
+
+
+<h4 class="wp-block-heading">💎 4,000+ Customers • $149</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/light-laravel-dashboard-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="light laravel dashboard template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/light-laravel-dashboard-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/light-laravel-dashboard-template.jpg" alt="light laravel dashboard template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Lightweight Laravel dashboard with simple creative design and fast performance across all devices.</p>
+
+
+
+<p>Light is one of the lightest Laravel dashboards on the market today, and there are two good reasons for that.</p>
+
+
+
+<p>First, it has a simple but creative design that creates great content distribution. Second, it has a lightweight structure that performs fast and seamlessly across different devices and platforms.</p>
+
+
+
+<p>There&#8217;s no bloat when it comes to Light. There is no fancy stuff and no other unnecessary elements that cause distractions.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/light-bootstrap-dashboard-pro-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h2 class="wp-block-heading">ThemeForest Premium Laravel Templates</h2>
+
+
+
+<p>The most popular and well-maintained Laravel admin templates from ThemeForest, trusted by thousands of developers worldwide. If you&#8217;re considering alternatives to Laravel, you might also want to explore our comprehensive guide to <a href="../react-admin-templates/index.html">React admin templates</a> or <a href="../vue-admin-dashboards/index.html">Vue admin dashboards</a> for different frontend approaches.</p>
+
+
+
+<h3 class="wp-block-heading">8. Metronic Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 120,000+ Customers • $42</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/metronic-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Metronic Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/metronic-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/metronic-laravel-2025.png" alt="Metronic Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> World&#8217;s #1 selling admin template with unmatched Laravel integration, 40+ layouts, and support for 8+ frameworks.</p>
+
+
+
+<p>Metronic Laravel stands as the ultimate admin dashboard solution trusted by 120,000+ developers worldwide. Features complete Laravel integration with authentication, user management, and CRUD operations pre-configured. Includes 40+ unique prebuilt layouts, 1000+ UI components, and seamless integration with React, Vue, and Angular. Perfect for enterprise Laravel applications requiring professional polish and extensive customization.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://preview.keenthemes.com/metronic8/demo1/index.html" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">9. Vuexy Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 23,000+ Sales • $42</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/vuexy-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Vuexy Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/vuexy-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/vuexy-laravel-2025.png" alt="Vuexy Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Most developer-friendly Laravel template combining Laravel backend with Vue.js frontend and atomic design system.</p>
+
+
+
+<p>Vuexy Laravel delivers exceptional developer experience by combining Laravel&#8217;s robust backend with Vue.js reactive frontend. Features 30+ Laravel pages, 60+ UI components, pre-built authentication system, and seamless API integration. The atomic design system ensures consistent, scalable development while Vue.js provides reactive user interfaces perfect for modern Laravel applications.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/vuexy-vuejs-html-laravel-admin-dashboard-template/23328599" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://demos.pixinvent.com/vuexy-html-admin-template/html/vertical-menu-template/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">10. Materialize Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 21,000+ Sales • $35</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/materialize-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Materialize Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/materialize-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/materialize-laravel-2025.png" alt="Materialize Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> #1 selling Material Design Laravel template with Google&#8217;s design principles and Laravel authentication integration.</p>
+
+
+
+<p>Materialize Laravel brings Google&#8217;s Material Design 2 to Laravel applications with seamless framework integration. Features advanced animations, comprehensive component library, pre-built Laravel authentication, and CRUD operations. Includes 5 niche dashboards, 10 Laravel applications, and updates aligned with Material Design guidelines. Perfect for Laravel projects requiring beautiful, consistent Material Design interfaces.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/materialize-material-design-admin-template/11446068" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://demos.pixinvent.com/materialize-html-admin-template/html/vertical-menu-template/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">11. Frest Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 15,000+ Sales • $35</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/frest-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Frest Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/frest-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/frest-laravel-2025.png" alt="Frest Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Most comprehensive Laravel Bootstrap 5 template with clean design and extensive Laravel-specific features.</p>
+
+
+
+<p>Frest Laravel combines clean aesthetics with powerful Laravel functionality, offering vertical and horizontal layouts, light/dark modes, and RTL support. Built specifically for Laravel developers with pre-configured authentication, database migrations, and API endpoints. Includes 40+ Laravel pages, advanced components, and seamless integration with Laravel&#8217;s ecosystem.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/frest-clean-minimal-bootstrap-admin-dashboard-template/24656841" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://demos.pixinvent.com/frest-html-admin-template/html/vertical-menu-template/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">12. OneUI Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 10,000+ Sales • $35</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/oneui-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="OneUI Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/oneui-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/oneui-laravel-2025.png" alt="OneUI Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Super flexible Laravel template with included Laravel 11 starter kit and comprehensive UI framework.</p>
+
+
+
+<p>OneUI Laravel provides unmatched flexibility for modern Laravel development with included Laravel 11 starter kit and comprehensive UI framework. Features responsive design, extensive Laravel documentation, and modular architecture that scales from simple dashboards to complex enterprise Laravel applications. Perfect for developers seeking multi-framework Laravel support.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/oneui-bootstrap-admin-dashboard-template-ui-framework-angularjs/11820082" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://demo.pixelcave.com/oneui/be_pages_dashboard.html" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">13. Sneat Laravel Pro</h3>
+
+
+
+<h4 class="wp-block-heading">💎 8,000+ Sales • $35</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/sneat-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Sneat Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/sneat-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/sneat-laravel-2025.png" alt="Sneat Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Most powerful Laravel Bootstrap 5 template with 6 unique layouts and Laravel 11 optimization.</p>
+
+
+
+<p>Sneat Laravel offers exceptional power and flexibility with 6 unique layouts specifically optimized for Laravel development. Features Laravel 11 compatibility, advanced Laravel components, multiple color schemes, and developer-friendly Laravel code structure. Perfect for creating sophisticated Laravel admin interfaces with minimal setup time and maximum Laravel integration.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeselection.com/item/sneat-dashboard-pro-laravel/" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">14. Skote Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 15,000+ Sales • $39</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/skote-laravel-fixed-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Skote Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/skote-laravel-fixed-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/skote-laravel-fixed-2025.png" alt="Skote Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Feature-rich Laravel 12 template with multi-lingual support and comprehensive Laravel integration.</p>
+
+
+
+<p>Skote Laravel is a fully featured premium admin dashboard template built specifically for Laravel 12 with developer-friendly code and multi-language support. Features Bootstrap 5.3.5 integration, 7 different Laravel layouts, RTL/LTR support, and is perfect for Laravel-based SaaS, eCommerce, CRM, and CMS applications with complete Laravel backend integration.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/skote-html-laravel-admin-dashboard-template/25548061" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://themesbrand.com/skote/layouts/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">15. Minia Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 4,000+ Sales • $32</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/minia-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Minia Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/minia-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/minia-laravel-2025.png" alt="Minia Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Lightweight Laravel 11 admin template with exceptional performance and clean code architecture.</p>
+
+
+
+<p>Minia Laravel offers a simple and beautiful admin template built specifically for Laravel 11 with Bootstrap and webpack integration. Features 6+ Laravel layouts, Dark/Light modes managed by SCSS, and excellent performance optimization. Perfect for Laravel developers seeking a lightweight yet feature-rich admin solution with clean Laravel code structure.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/minia-laravel-8-admin-dashboard-template/33030918" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://themesbrand.com/minia/layouts/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">16. Velzon Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 4,500+ Sales • $39</h4>
+
+
+
+<figure class="wp-block-image size-full"><picture decoding="async" class="wp-image-2639">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-scaled.png.avif 2560w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-300x172.png.avif 300w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-1024x587.png.avif 1024w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-768x441.png.avif 768w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-1536x881.png.avif 1536w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-2048x1175.png.avif 2048w" sizes="(max-width: 2560px) 100vw, 2560px"/>
+<img decoding="async" width="2560" height="1469" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201469'%3E%3C/svg%3E" alt="Velzone laravel admin template" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-scaled.png 2560w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-300x172.png 300w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-1024x587.png 1024w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-768x441.png 768w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-1536x881.png 1536w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-2048x1175.png 2048w" data-lazy-sizes="(max-width: 2560px) 100vw, 2560px" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-scaled.png"/><noscript><img decoding="async" width="2560" height="1469" src="../../wp-content/uploads/2025/09/velzone-admin-laravel-template-scaled.png" alt="Velzone laravel admin template" srcset="https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-scaled.png 2560w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-300x172.png 300w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-1024x587.png 1024w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-768x441.png 768w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-1536x881.png 1536w, https://adminlte.io/wp-content/uploads/2025/09/velzone-admin-laravel-template-2048x1175.png 2048w" sizes="(max-width: 2560px) 100vw, 2560px"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Modern responsive Laravel template with 6 dashboards and comprehensive Laravel ecosystem integration.</p>
+
+
+
+<p>Velzon Laravel is a fully responsive premium Laravel template built with Laravel 12 support. Features 6 different Laravel dashboards, 12+ Laravel apps, 165+ pages, and complete Laravel ecosystem integration. Includes advanced Laravel features like authentication, middleware support, and database integrations perfect for large-scale Laravel applications.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://themeforest.net/item/velzon-aspnet-core-admin-dashboard-template/36077495" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://themesbrand.com/velzon/index.html" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h2 class="wp-block-heading">Professional Laravel Admin Solutions</h2>
+
+
+
+<p>For developers seeking specialized Laravel admin panel solutions with advanced CRUD capabilities and Laravel-specific features. If you&#8217;re looking for framework-agnostic options, our comprehensive admin templates guide covers the best dashboard solutions across all technologies:</p>
+
+
+
+<h3 class="wp-block-heading">17. CoreUI Laravel</h3>
+
+
+
+<h4 class="wp-block-heading">💎 Free/Pro Options Available</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/coreui-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="CoreUI Laravel Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/coreui-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/coreui-laravel-2025.png" alt="CoreUI Laravel Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Leading Laravel admin template used by Fortune 500 companies with comprehensive Laravel integration and professional support.</p>
+
+
+
+<p>CoreUI Laravel delivers enterprise-grade admin capabilities specifically built for Laravel applications. Features advanced Laravel components, comprehensive documentation, and seamless Laravel ecosystem integration. Trusted by Fortune 500 companies for mission-critical Laravel applications requiring professional-level features and ongoing Laravel-specific technical support.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://coreui.io/laravel/" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://coreui.io/demos/bootstrap/4.2/free/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">18. Orchid Platform</h3>
+
+
+
+<h4 class="wp-block-heading">💎 Free Open Source</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/orchid-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Orchid Laravel Platform" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/orchid-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/orchid-laravel-2025.png" alt="Orchid Laravel Platform"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Open-source Laravel CRUD interface with code-driven development and flexible Laravel admin panel creation.</p>
+
+
+
+<p>Orchid Platform is a powerful open-source Laravel package for rapid admin panel development. Features Laravel-native CRUD interface, code-driven development approach, form builder, table filtering, and text search specifically designed for Laravel. Perfect for developers who prefer Laravel-centric development with complete control over their admin panel architecture.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://github.com/orchidsoftware/platform" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://orchid.software/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">19. Laravel Backpack</h3>
+
+
+
+<h4 class="wp-block-heading">💎 Freemium Model</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2025/09/backpack-laravel-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Laravel Backpack Template" data-lazy-src="https://adminlte.io/wp-content/uploads/2025/09/backpack-laravel-2025.png"/><noscript><img decoding="async" src="../../wp-content/uploads/2025/09/backpack-laravel-2025.png" alt="Laravel Backpack Template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Flexible Laravel admin panel builder with extensive customization using familiar Laravel patterns and CRUD operations.</p>
+
+
+
+<p>Laravel Backpack provides the most flexibility for deep Laravel customizations using familiar Laravel patterns. Features comprehensive CRUD operations, Laravel-native development approach, and extensive Laravel ecosystem integration. Used to power everything from presentation websites to complex ERPs with Laravel backend. Perfect for Laravel developers requiring maximum customization flexibility.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://backpackforlaravel.com/" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://backpackforlaravel.com/" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h2 class="wp-block-heading">Free Laravel Templates</h2>
+
+
+
+<p>High-quality free Laravel admin templates perfect for learning, prototyping, and open-source projects:</p>
+
+
+
+<h3 class="wp-block-heading">20. Argon Laravel (Free)</h3>
+
+
+
+<h4 class="wp-block-heading">💎 Free (30,000+ Downloads)</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/argon-free-laravel-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="argon free laravel template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/argon-free-laravel-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/argon-free-laravel-template.jpg" alt="argon free laravel template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Free Laravel template with 100 elements, plugins, and example pages for rapid Laravel prototyping.</p>
+
+
+
+<p>You don&#8217;t always need to pay to benefit from a Laravel dashboard. Since Argon pro is our favorite, the free versions are the same.</p>
+
+
+
+<p>With approx. 30k downloads, Argon shows that it&#8217;s a powerful alternative that comes with no hidden fees. A great way to test the waters before upgrading to pro.</p>
+
+
+
+<p>You still get a collection of one hundred elements, multiple plugins and several ready-to-use examples pages. You don&#8217;t need to do anything from scratch. Rather improve the available material and enjoy the quick dashboard execution.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/argon-dashboard-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/argon-dashboard-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">21. Material Laravel (Free)</h3>
+
+
+
+<h4 class="wp-block-heading">💎 Free (24,000+ Downloads)</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/material-free-laravel-dashboard-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="material free laravel dashboard template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/material-free-laravel-dashboard-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/material-free-laravel-dashboard-template.jpg" alt="material free laravel dashboard template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Free Material Design Laravel template with 60 elements, Laravel authentication, and Material Design components.</p>
+
+
+
+<p>I am sure many skipped the premium Material and jumped straight here. You did the right thing! Material will do you extremely well if you are looking for a free Laravel dashboard.</p>
+
+
+
+<p>With over 24k+ downloads, Material is a popular template that already helped many users do magical things.</p>
+
+
+
+<p>However, the free demo contains much less material than the pro version. Still, it includes sixty elements, two plugins, three example pages, and some neat styling options.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/material-dashboard-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/material-dashboard-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h3 class="wp-block-heading">22. Black Laravel (Free)</h3>
+
+
+
+<h4 class="wp-block-heading">💎 Free (15,000+ Downloads)</h4>
+
+
+
+<figure class="wp-block-image"><picture decoding="async">
+<source type="image/avif" data-lazy-srcset="https://adminlte.io/wp-content/uploads/2021/06/black-free-laravel-template.jpg.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="black free laravel template" data-lazy-src="https://adminlte.io/wp-content/uploads/2021/06/black-free-laravel-template.jpg"/><noscript><img decoding="async" src="../../wp-content/uploads/2021/06/black-free-laravel-template.jpg" alt="black free laravel template"/></noscript>
+</picture>
+</figure>
+
+
+
+<p><strong>Why we like it:</strong> Free dark Laravel template with responsive layout, color skins, and comprehensive Laravel setup guide.</p>
+
+
+
+<p>Yes, here it is, the free dark Laravel template, Black. A great approach to starting with your development process is by going free and then upgrade to pro.</p>
+
+
+
+<p>The free dashboard already has a decent portion of the material to quickly sort out an admin. A quick setup guide also ensures everyone enjoys a smooth sail.</p>
+
+
+
+<p>You can pick any of the three main color skins, make other styling configurations and extra customizations, and then you are all set to go live.</p>
+
+
+
+<div class="blog-btn"><a class="preview_btn" href="https://www.creative-tim.com/product/black-dashboard-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Download</a> <a class="cart_btn" href="https://www.creative-tim.com/live/black-dashboard-laravel/?AFFILIATE=52980" target="_blank" rel="nofollow noopener">Preview</a></div>
+
+
+
+<h2 class="wp-block-heading">Choosing the Right Laravel Dashboard</h2>
+
+
+
+<p>When selecting a Laravel dashboard template, consider your project&#8217;s specific requirements, Laravel version compatibility, and long-term maintenance needs. Premium templates offer commercial support, advanced Laravel features, and regular updates, while free templates provide excellent starting points for Laravel prototypes and learning projects.</p>
+
+
+
+<p>For a broader perspective on admin dashboard options beyond Laravel, explore our <a href="../admin-templates/index.html">comprehensive admin templates collection</a> which covers all major frameworks and technologies.</p>
+
+
+
+<p>All templates listed are built following Laravel best practices, ensuring compatibility, security, and ease of integration with your Laravel applications.</p>
+        </div>
+        <div class="blog__details__comment">
+    <h4>Comments <span>(No Comments)</span></h4>
+    </div>
+
+            <div class="blog__details__form">
+            <h4>Add Your Comment</h4>
+            <form action="https://adminlte.io/wp-comments-post.php" method="post" id="commentform">
+                                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" placeholder="Name:" name="author" id="author"
+                               value="">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" placeholder="Email:" name="email" id="email"
+                               value="" size="22" tabindex="2">
+                    </div>
+                    <div class="col-lg-12">
+                        <textarea placeholder="Message" name="comment" id="comment"></textarea>
+                        <input type="hidden" name="comment_post_ID" value="773"/>
+                        <button name="submit" type="submit" id="submit">Send Message <i class="ti-arrow-right"></i>
+                        </button>
+                        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="1ddbed50ab" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="189"/><script type="rocketlazyloadscript">document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>                    </div>
+                                    </div>
+            </form>
+        </div>
+        </div>
+</div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+    jQuery(".blog__details__social").jsSocials({
+        showLabel: false,
+        showCount: false,
+        shares: ["facebook", "linkedin", "pinterest", "twitter"]
+    });
+});</script>
+<!-- Footer Section Begin -->
+<footer data-wpr-lazyrender="1" class="footer" id="footerSection">
+    <div  class="footer__content">
+        <div  class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="../../index.html"><img src="../../wp-content/uploads/2021/03/logo.png" width="160px;" height="27px;" alt="Footer Logo"></a>
+                        </div>
+                        <p>Building an admin dashboard has never been easier thanks to AdminLTE</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__widget footer__links">
+                        <h5>Quick Access</h5>
+                        <div class="menu-quick-access-container"><ul id="menu-quick-access" class="menu"><li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-215"><a href="../index.html">Blogs</a></li>
+</ul></div>                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__widget footer__links">
+                        <h5>Help</h5>
+                        <div class="menu-help-container"><ul id="menu-help" class="menu"><li id="menu-item-219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-219"><a href="../../docs/index.html">Knowledge Base</a></li>
+<li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221"><a href="https://github.com/ColorlibHQ/AdminLTE/issues">Get Support</a></li>
+</ul></div>                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Popular Posts</h5>
+                        <p>Please subscribe for the latest news on AdminLTE development</p>
+                        <form action="#">
+                            <input type="text" placeholder="Email Address">
+                            <button type="submit"><i class="fa fa-send"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="footer__copyright">
+        <div  class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="footer__copyright__text">
+                        <p>Copyright © 2014-2025 AdminLTE. All rights reserved. Privacy Policy</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer__copyright__links">
+                        <div class="menu-sub-footer-container"><ul id="menu-sub-footer" class="menu"><li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="../../terms-conditions/index.html">Terms &#038; Conditions</a></li>
+<li id="menu-item-225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-225"><a href="#">Privacy Policy</a></li>
+</ul></div>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+<script type="speculationrules">
+{"prerender":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/theme-promo\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prerender, .no-prerender a"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"moderate"}]}
+</script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/adminlte.io","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("../../index.html")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("../../index.html")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script data-minify="1" defer type="text/javascript" src="../../wp-content/cache/min/1/wp-content/plugins/akismet/_inc/akismet-frontendd994.js?ver=1757080640" id="akismet-frontend-js"></script>
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+			(function() {
+			var t   = document.createElement( 'script' );
+			t.type  = 'text/javascript';
+			t.async = true;
+			t.id    = 'gauges-tracker';
+			t.setAttribute( 'data-site-id', '63336f816027a727865f4392' );
+			t.src = '../../../secure.gaug.es/track.js';
+			var s = document.getElementsByTagName( 'script' )[0];
+			s.parentNode.insertBefore( t, s );
+			})();
+		</script>
+		<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="../../wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2437d112162f4ec4b63c3ca0eb38fb20","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from adminlte.io/blog/laravel-dashboards/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 11:40:55 GMT -->
+</html>
+<!--
+	generated in 0.647 seconds
+	125632 bytes batcached for 300 seconds
+-->
