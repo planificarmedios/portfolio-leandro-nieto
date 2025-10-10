@@ -57,7 +57,7 @@ const translations = {
     "resume.jphlions.task3": "Implementation of responsive interfaces.",
     "resume.jphlions.task4": "Continuous collaboration with remote teams.",
     "resume.jphlions.task5": "Ensured application scalability, maintainability, and performance.",
-    "resume.professionalExperience": "Professional Experience.",
+    "resume.professionalExperience": "Professional Experience",
     "resume.fortress.position": "fortressargentina.com - Customer Service & Admin Manager",
     "resume.fortress.taskb": "From January 2018 to July 2022.",
     "resume.fortress.task1": "Experienced professional with a strong background in system development and operational optimization.",
@@ -82,7 +82,7 @@ const translations = {
     "resume.posnet.task4": "Coordinated with suppliers and logistics teams for equipment dispatch and repair.",
   },
   es: {
-    "resume.professionalExperience": "Trayectoria Profesional.",
+    "resume.professionalExperience": "Trayectoria Profesional",
     "resume.fortress.company": "Fortress Argentina",
     "portfolio.filter.all": "Todos los proyectos",
     "portfolio.filter.photography": "Animaciones 3D",
