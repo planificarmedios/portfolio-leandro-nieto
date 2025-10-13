@@ -253,7 +253,7 @@ if (themeSwitch) {
   if (localStorage.getItem('theme') === 'light') {
     document.body.classList.add('light-mode');
     themeSwitch.querySelector('i').classList.replace('bi-sun-fill', 'bi-moon-fill');
-  }
+  } 
 }
 
 
