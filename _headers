@@ -1,0 +1,3 @@
+/assets/models/*
+  Content-Type: model/gltf-binary
+  Access-Control-Allow-Origin: *

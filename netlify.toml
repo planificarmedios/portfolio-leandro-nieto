@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = "none"
+
+[[headers]]
+  for = "/*.glb"
+  [headers.values]
+    Content-Type = "model/gltf-binary"
