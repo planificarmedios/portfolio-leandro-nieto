@@ -257,20 +257,6 @@ if (themeSwitch) {
 }
 
 
-  const viewer = document.getElementById("viewer3d");
-
-  function updateModel() {
-    console.log ("Updating model...");
-    if (document.body.classList.contains("light-mode")) {
-      viewer.setAttribute("src", "https://sketchfab.com/models/fa026f8edf824b1c8c9b890259a2c314/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
-    } else {
-      viewer.setAttribute("src", "https://sketchfab.com/models/e885c0ffdcf94d0097a24fb1b91a038f/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1");
-    }
-  }
-
-  // Ejecutar al inicio
-  updateModel();
-
   // Observar cambios en la clase del body
   const observerupdateModel = new MutationObserver(updateModel);
   observerupdateModel.observe(document.body, { attributes: true, attributeFilter: ["class"] });

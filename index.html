@@ -122,37 +122,18 @@
 
             <div class="col-lg-6 aos-init aos-animate hero-profile-col" 
                 data-aos="fade-left" data-aos-delay="200">
-              <div class="portfolio-wrap" data-background="">
+                <div class="portfolio-wrap" data-background="">
 
-                              
-                      <iframe 
-                        id ="viewer3d"
-                        title="Room aquarium (Now Animated)" 
-                        frameborder="0" 
-                        allowfullscreen ="true" 
-                        mozallowfullscreen="true" 
-                        webkitallowfullscreen="true" 
-                        allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope"
-                        xr-spatial-tracking
-                        execution-while-out-of-viewport
-                        execution-while-not-rendered
-                        web-share
-                        src="https://sketchfab.com/models/a60be41028b049b6a488f5c6effcb6f8/embed?autostart=1&transparent=1&ui_hint=0&ui_theme=dark&dnt=1"
-                        style="width:100%; height:100%;">
-                      </iframe>
+                       <article class="hero-visual">
+                          <canvas class="lottie-canvas" data-lottie="./assets/lottie/coding.json"></canvas>
+                          <!-- <canvas class="lottie-canvas" data-lottie="./assets/lottie/coding.json"></canvas> -->
+                        </article>
 
                       <div class="sketchfab-overlay mb-4" id="sketchfab-overlay">
                         <div class="drag-icon">
-                          <!-- Flecha izquierda -->
-                          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-
-                          
-                          <!-- Flecha derecha -->
-                          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
+                                                   
+                          <!-- Icono de mano tipo puntero -->
+                          <i class="bi bi-hand-index pointer-icon" style="color: white;"></i>
                         </div>
                       </div>
                  
@@ -171,20 +152,21 @@
     </section>
 
     <!-- 3D Model Viewer Test -->
-<section id="model3d-test" class="container my-5">
-  <h3><i class="bi bi-cube"></i> 3D Model Test</h3>
+    <section id="model3d-test" class="container my-5">
+      <h3><i class="bi bi-cube"></i> 3D Model Test</h3>
 
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  <model-viewer
-    src="assets/models/room.glb"
-    alt="Room Aquarium"
-    auto-rotate
-    camera-controls
-    shadow-intensity="1"
-    style="width: 100%; height: 500px; border-radius: 10px; background-color: #000;">
-  </model-viewer>
-</section>
+      <model-viewer
+        src="assets/models/room.glb"
+        alt="Room Aquarium"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+        style="width: 100%; height: 500px; border-radius: 10px; background-color: #000;">
+      </model-viewer>
+    </section>
+
 
    
     <section id="portfolio" class="portfolio section">
@@ -209,6 +191,7 @@
                   <li data-filter=".filter-nature" data-i18n="portfolio.filter.nature">Recognition</li>
                   <li data-filter=".filter-realtime" data-i18n="portfolio.filter.realtime">Realtime Face Tracking</li>
                   <li data-filter=".filter-themes" data-i18n="portfolio.filter.themes">Auto Multi-Themes</li>
+                  <li data-filter=".filter-inmersive-experince" data-i18n="">Immersive UX</li>
                 </ul>
               </div>
             </div>
@@ -263,7 +246,7 @@
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-themes" style="position: absolute; left: 0px; top: 0px;">
                   <div class="portfolio-wrap">
-                    <canvas class="lottie-canvas" data-lottie="./assets/lottie/DarkTheme.json" width="501" height="415"></canvas>
+                    <canvas class="lottie-canvas" id="dark-theme" data-lottie="./assets/lottie/DarkTheme.json" width="501" height="415"></canvas>
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Filter Themes</span>
@@ -327,16 +310,6 @@
                   </div>
                 </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-themes" style="position: absolute; left: 0px; top: 0px;">
-                  <div class="portfolio-wrap">
-                     <canvas class="lottie-canvas" data-lottie="./assets/lottie/LighttoDark.json" width="501" height="415"></canvas>
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Filter Themes</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-realtime" style="position: absolute; left: 360px; top: 374px;">
                   <div class="portfolio-wrap">
@@ -347,7 +320,54 @@
                       </div>
                     </div>
                   </div>
-                </div><!-- End Portfolio Item -->
+                </div>
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-inmersive-experince relative w-full min-h-[600px]">
+                <div class="portfolio-wrap w-full h-full">
+
+                     <iframe 
+                        id ="viewer3d"
+                        title="Room aquarium (Now Animated)" 
+                        frameborder="0" 
+                        allowfullscreen ="true" 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/fa026f8edf824b1c8c9b890259a2c314/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1"
+                        style="width:100%; height:100%;">
+                      </iframe>
+                    
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-inmersive-experince relative w-full min-h-[600px]">
+                <div class="portfolio-wrap w-full h-full">
+
+                     <iframe 
+                        id ="viewer3d"
+                        title="Room aquarium (Now Animated)" 
+                        frameborder="0" 
+                        allowfullscreen ="true" 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/e885c0ffdcf94d0097a24fb1b91a038f/embed?autostart=1&ui_theme=dark&transparent=1&ui_hint=0&dnt=1s"
+                        style="width:100%; height:100%;">
+                      </iframe>
+                    
+                  </div>
+                </div>
+
+
+
 
               </div>
             </div>
