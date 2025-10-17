@@ -2950,6 +2950,9 @@ model-viewer {
   --poster-color: transparent;
 }
 
+#helicopter-3D {
+  background-color: #ffffff !important; /* fuerza fondo blanco */
+}
 /* Para que model-viewer se comporte como las imágenes */
 .portfolio .portfolio-wrap model-viewer {
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -3487,3 +3490,116 @@ body.light-theme .hero .hero-actions .btn.btn-outline:hover {
 
 /****************************************************/
 
+article {
+  position: relative;
+  width: 380px;
+  transition: all 0.3s ease;
+}
+
+article img:first-child {
+  box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+article img:last-child {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+#id-mario-bg {
+  background-image: url('./assets/img/mario-rock.jpg');
+  background-size: contain;          /* muestra toda la imagen completa */
+  background-repeat: no-repeat;
+  background-position: center center;/* centrada perfectamente */
+  background-position: center top;  /* 👈 mueve la imagen hacia arriba */
+  width: 50%;
+  min-height: 800px;                 /* ajusta según cuánto espacio quieras */
+  display: flex;                     /* para centrar el contenido del article */
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+/* Reduce el espacio entre el título y el contenido en la sección immersive */
+#immersive .section-title {
+  margin-bottom: 0rem;     /* antes probablemente tenía 4rem o más */
+  padding-bottom: 0;
+}
+
+#immersive .section-title h2 {
+  margin-bottom: 0;        /* elimina espacio adicional del h2 */
+}
+
+#immersive .container + .container {
+  margin-top: 0;           /* evita espacio entre los dos .container */
+  padding-top: 0;
+}
+
+#immersive .row {
+  display: flex;
+  align-items: stretch; /* fuerza que ambas columnas tengan la misma altura */
+}
+
+#immersive .col-lg-6 {
+  display: flex;
+  align-items: center;     /* ajusta verticalmente el contenido; prueba con 'flex-start' o 'stretch' */
+  justify-content: center; /* centra horizontalmente; prueba 'flex-start' si querés que quede arriba */
+  /* padding-top / padding-bottom: ajusta si hay espacio extra dentro de la columna */
+}
+
+#immersive article {
+  padding: 0px;   /* da más “relleno” alrededor de las imágenes */
+  width: 800px;             
+  height: 100%;            /* ajusta altura; prueba con 'min-height: 500px;' para igualar al viewer */
+  min-height: 500px;
+  display: flex;
+  align-items: center;     /* centra verticalmente el contenido del article */
+  justify-content: center; /* centra horizontalmente el contenido */
+  box-sizing: border-box;     /* importante: el borde se incluye dentro del width/height */
+  border-radius: 16px;
+}
+
+#immersive article img {
+  max-width: 100%;         /* ancho máximo relativo al article */
+  height: auto;            /* mantiene proporción; cambia a '100%' si querés que ocupe toda la altura */
+  /* object-fit: contain;   // probar 'cover' si querés que la imagen llene todo el espacio recortando */
+  border-radius: 10px;
+}

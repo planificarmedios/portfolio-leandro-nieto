@@ -51,6 +51,7 @@
     <li><a href="#professionalExperience"><i class="bi bi-file-earmark-text navicon" style="margin-right: 6px;"></i><span data-i18n="hero-experience">Resume</span></a></li>
     <li><a href="#skills"><i class="bi bi-images navicon" style="margin-right: 6px;"></i><span data-i18n="menu.portfolio">Skills</span></a></li>
     <li><a href="#portfolio"><i class="bi bi-badge-3d" style="margin-right: 6px;"></i><span data-i18n="hero-contact">Integration  </span></a></li>
+    <li><a href="#immersive"><i class="bi bi-binoculars" style="margin-right: 6px;"></i><span data-i18n="hero-immersive">Immersive & augmented UX</span></a></li>
     <li>
       <a href="#"
         onclick="abrirVentanaGestion(); return false;">
@@ -124,19 +125,10 @@
                 data-aos="fade-left" data-aos-delay="200">
                 <div class="portfolio-wrap" data-background="">
 
-                       <article class="hero-visual">
+                   
                        <!--  <img src="./assets/img/computer.png" alt="Commstore Logo Invertido" class=""> -->
                           <canvas class="lottie-canvas" data-lottie="./assets/lottie/coding.json"></canvas>
                           <!-- <canvas class="lottie-canvas" data-lottie="./assets/lottie/coding.json"></canvas> -->
-                        </article>
-
-                      <div class="sketchfab-overlay mb-4" id="sketchfab-overlay">
-                        <div class="drag-icon">
-                                                   
-                          <!-- Icono de mano tipo puntero -->
-                          <i class="bi bi-hand-index pointer-icon" style="color: white;"></i>
-                        </div>
-                      </div>
                  
                   <div class="portfolio-info">
                     <div class="content">
@@ -152,24 +144,7 @@
 
     </section>
 
-    <!-- 3D Model Viewer Test -->
-    <section id="model3d-test" class="container my-5">
-      <h3><i class="bi bi-cube"></i> 3D Model Test</h3>
-
-      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-      <model-viewer
-        src="assets/models/helicopter.glb"
-        alt="Room Aquarium"
-        auto-rotate
-        camera-controls
-        shadow-intensity="1"
-        style="width: 100%; height: 500px; border-radius: 10px; background-color: #000;">
-      </model-viewer>
-    </section>
-
-
-   
+    
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
@@ -192,7 +167,7 @@
                   <li data-filter=".filter-nature" data-i18n="portfolio.filter.nature">Recognition</li>
                   <li data-filter=".filter-realtime" data-i18n="portfolio.filter.realtime">Realtime Face Tracking</li>
                   <li data-filter=".filter-themes" data-i18n="portfolio.filter.themes">Auto Multi-Themes</li>
-                  <li data-filter=".filter-inmersive-experince" data-i18n="">Immersive UX</li>
+                  <li data-filter=".filter-inmersive-experince" data-i18n="portfolio.filter.multiverse">Multiverse</li>
                 </ul>
               </div>
             </div>
@@ -819,6 +794,47 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="immersive" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2 data-i18n="inmersive-tittle">Immersive & augmented reality</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-4 g-lg-5">
+
+          <div id="id-mario-article" class="col-lg-6">
+            <article style="background-color: white;width:350px;height:400px;"> 
+                <img style="width:350px;height:400px;" src="./assets/img/mario-rock.jpg"> 
+                <img src="./assets/img/mario-greeting.png"> 
+              </article>
+          </div>
+
+          <div id="id-mario-bg" class="col-lg-6">
+     
+            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+                  <model-viewer
+                   id="helicopter-3D"
+                    src="assets/models/helicopter.glb"
+                    alt="Room Aquarium"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 500px; border-radius: 10px; background-color: #faf8f8;">
+                  </model-viewer>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
  
