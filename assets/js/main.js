@@ -257,9 +257,6 @@ if (themeSwitch) {
 }
 
 
-  // Observar cambios en la clase del body
-  const observerupdateModel = new MutationObserver(updateModel);
-  observerupdateModel.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
   function animateCount(el, target) {
     let start = 0;
