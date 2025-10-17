@@ -3624,7 +3624,7 @@ article:hover img:last-child {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(63, 1, 54, 0.879); /* gris suave transparente */
+  background: rgba(80, 42, 1, 0.879); /* gris suave transparente */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3636,7 +3636,7 @@ article:hover img:last-child {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(63, 1, 54, 0.879); /* gris suave transparente */
+  background: rgba(4, 174, 253, 0.879); /* gris suave transparente */
   display: flex;
   align-items: center;
   justify-content: center;
