@@ -3556,6 +3556,11 @@ article:hover img:last-child {
   align-items: center;
   justify-content: center;
   border-radius: 16px;
+  position: relative;
+}
+
+#id-mario-article { 
+  position: relative;
 }
 
 /* Reduce el espacio entre el título y el contenido en la sección immersive */
@@ -3602,4 +3607,46 @@ article:hover img:last-child {
   height: auto;            /* mantiene proporción; cambia a '100%' si querés que ocupe toda la altura */
   /* object-fit: contain;   // probar 'cover' si querés que la imagen llene todo el espacio recortando */
   border-radius: 10px;
+}
+
+/* Contenedor del hint */
+.interaction-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* no interfiere con el model-viewer */
+}
+
+/* Círculo translúcido */
+.interaction-hint .circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(63, 1, 54, 0.879); /* gris suave transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2.5s infinite;
+}
+
+.interaction-hint .circle2 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(63, 1, 54, 0.879); /* gris suave transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2.5s infinite;
+}
+
+/* Flechitas */
+.interaction-hint .arrow {
+  position: absolute;
+  font-size: 14px;
+  color: rgba(80, 80, 80, 0.8);
+  opacity: 0.9;
 }
