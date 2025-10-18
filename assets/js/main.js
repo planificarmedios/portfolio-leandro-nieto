@@ -325,10 +325,9 @@ if (themeSwitch) {
   const currentTheme = localStorage.getItem('theme');
   const isLightMode = currentTheme === 'light';
 
-  // Seleccionar la URL según el tema
-  const url = isLightMode
-    ? 'http://localhost:5001/admin-io/themes/v3/index-2.html' // versión clara
-    : 'http://localhost:5001/admin-io/themes/v3/index2.html'; // versión oscura
+ const url = isLightMode
+  ? './themes/v3/index-2.html'   // versión clara
+  : './themes/v3/index2.html';   // versión oscura
 
   // Opciones del popup
   const opciones =
