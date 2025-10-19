@@ -475,13 +475,14 @@ h6 {
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
-section,
-.section {
+section:not(#testimonials),
+.section:not(#testimonials) {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 30px 0;
   overflow: clip;
 }
+
 
 /*--------------------------------------------------------------
 # Global Section Titles
@@ -901,9 +902,9 @@ section,
 .about .contact-links .contact-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   padding: 0.75rem 1rem;
-  /* background-color: color-mix(in srgb, var(--surface-color), var(--background-color) 50%); */
   background-color: #232323;
   border-radius: 0.75rem;
   text-decoration: none;
@@ -1863,22 +1864,6 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials .testimonial-masonry {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  position: relative;
-}
-
-.testimonials .testimonial-masonry::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, color-mix(in srgb, var(--accent-color), transparent 95%), transparent);
-  opacity: 0.5;
-  z-index: -1;
-}
 
 .testimonials .testimonial-item:nth-child(3n-1) {
   margin-top: 3rem;
@@ -1893,8 +1878,17 @@ section,
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
+body.light-mode .testimonials .testimonial-item.highlight .testimonial-content { 
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
 .testimonials .testimonial-item.highlight .testimonial-content .quote-pattern {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 85%) !important;;
+}
+
+body.light-mode .testimonials .testimonial-item.highlight .testimonial-content .quote-pattern {
+   background-color: color-mix(in srgb, var(--accent-color), transparent 85%) !important;;
 }
 
 .testimonials .testimonial-item.highlight .testimonial-content .quote-pattern i {
@@ -1908,6 +1902,18 @@ section,
   position: relative;
   transition: all 0.3s ease;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+body.light-mode .testimonial-content {
+  
+    background-color: #333;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s 
+ease;
+    border: 1px solid
+ color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
 .testimonials .testimonial-content:hover {
@@ -1973,69 +1979,9 @@ section,
   color: color-mix(in srgb, var(--heading-color), transparent 40%);
 }
 
-@media (max-width: 1199.98px) {
-  .testimonials .testimonial-masonry {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
 
-  .testimonials .testimonial-item:nth-child(3n-1),
-  .testimonials .testimonial-item:nth-child(3n) {
-    margin-top: 0;
-  }
 
-  .testimonials .testimonial-item:nth-child(even) {
-    margin-top: 2rem;
-  }
-}
 
-@media (max-width: 767.98px) {
-  .testimonials .testimonial-masonry {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .testimonials .testimonial-item:nth-child(even) {
-    margin-top: 0;
-  }
-
-  .testimonials .testimonial-content {
-    padding: 1.5rem;
-  }
-
-  .testimonials .testimonial-content p {
-    font-size: 0.9375rem;
-    margin: 1.25rem 0;
-  }
-
-  .testimonials .quote-pattern {
-    width: 2.25rem;
-    height: 2.25rem;
-    top: -1.125rem;
-  }
-
-  .testimonials .quote-pattern i {
-    font-size: 1.125rem;
-  }
-
-  .testimonials .client-info {
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
-  }
-
-  .testimonials .client-image {
-    width: 45px;
-    height: 45px;
-  }
-
-  .testimonials .client-details h3 {
-    font-size: 1rem;
-  }
-
-  .testimonials .client-details .position {
-    font-size: 0.8125rem;
-  }
-}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -3464,8 +3410,6 @@ body.light-theme .hero .hero-actions .btn.btn-outline:hover {
 
 
 #dark-theme {
-
-
   animation: lightDarkLoop 6s ease-in-out infinite;
 }
 
@@ -3746,3 +3690,115 @@ article:hover img:last-child {
 #color-picker #hue-slider::-webkit-slider-thumb:hover {
   transform: scale(1.2);
 }
+
+@media (max-width: 1199.98px) {
+  .testimonials .testimonial-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonials .testimonial-item:nth-child(3n-1),
+  .testimonials .testimonial-item:nth-child(3n) {
+    margin-top: 0;
+  }
+
+  .testimonials .testimonial-item:nth-child(even) {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .testimonials .testimonial-masonry {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonials .testimonial-item:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .testimonials .testimonial-content {
+    padding: 1.5rem;
+  }
+
+  .testimonials .testimonial-content p {
+    font-size: 0.9375rem;
+    margin: 1.25rem 0;
+  }
+
+  .testimonials .quote-pattern {
+    width: 2.25rem;
+    height: 2.25rem;
+    top: -1.125rem;
+  }
+
+  .testimonials .quote-pattern i {
+    font-size: 1.125rem;
+  }
+
+  .testimonials .client-info {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+  }
+
+  .testimonials .client-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .testimonials .client-details h3 {
+    font-size: 1rem;
+  }
+
+  .testimonials .client-details .position {
+    font-size: 0.8125rem;
+  }
+}
+
+.testimonials .testimonial-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.testimonials .testimonial-masonry::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, color-mix(in srgb, var(--accent-color), transparent 95%), transparent);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+
+/* ============================================
+   🔒 Bloquear modo claro en #testimonials
+   ============================================ */
+body.light-mode #testimonials,
+body.light-mode #testimonials * {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+body.light-mode #testimonials .testimonial-content {
+  background-color: var(--surface-color) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.light-mode #testimonials .quote-pattern {
+  background-color: #2e2e2e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.light-mode #testimonials .client-details .position {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.light-mode #testimonials h3,
+body.light-mode #testimonials p {
+  color: #fff !important;
+}
+
+
